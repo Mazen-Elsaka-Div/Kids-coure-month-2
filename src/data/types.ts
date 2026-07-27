@@ -7,7 +7,7 @@ export interface SlideData {
   content: string[];
   image?: string;
   imagePrompt?: string;
-  type: "content" | "quiz" | "game" | "activity" | "review" | "homework";
+  type: "content" | "quiz" | "game" | "activity" | "review" | "homework" | "video";
   newWord?: {
     word: string;
     pronunciation: string;
@@ -29,6 +29,8 @@ export interface SlideData {
   };
   // Game-specific fields
   gameUrl?: string;
+  // Video-specific fields
+  videoUrl?: string;
   // Review-specific fields
   reviewPoints?: string[];
   // Activity-specific fields

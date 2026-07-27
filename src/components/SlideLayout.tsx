@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { NewWord } from "./NewWord";
 import { QuizSlide } from "./QuizSlide";
 import { GameEmbed } from "./GameEmbed";
+import { VideoEmbed } from "./VideoEmbed";
 
 export function SlideLayout({ slide }: { slide: SlideData }) {
   // Background variants
@@ -50,6 +51,10 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
 
         {slide.type === "game" && slide.gameUrl && (
           <GameEmbed url={slide.gameUrl} />
+        )}
+
+        {slide.type === "video" && slide.videoUrl && (
+          <VideoEmbed url={slide.videoUrl} />
         )}
 
         {slide.type === "review" && slide.reviewPoints && (

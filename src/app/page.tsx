@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { session1 } from "@/data/session1";
 import { session2 } from "@/data/session2";
+import { session3 } from "@/data/session3";
+import { session4 } from "@/data/session4";
 
 export default function Home() {
-  const sessions = [session1, session2];
+  const sessions = [session1, session2, session3, session4];
 
   return (
     <main className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-8">

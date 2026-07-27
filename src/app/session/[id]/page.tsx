@@ -1,13 +1,15 @@
 import { notFound } from "next/navigation";
 import { session1 } from "@/data/session1";
 import { session2 } from "@/data/session2";
+import { session3 } from "@/data/session3";
+import { session4 } from "@/data/session4";
 import { Navigation } from "@/components/Navigation";
 import { SlideLayout } from "@/components/SlideLayout";
 import { TeacherNotes } from "@/components/TeacherNotes";
 import { Mascot } from "@/components/Mascot";
 
 export function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }];
 }
 
 export default async function SessionPage(props: {
@@ -18,7 +20,7 @@ export default async function SessionPage(props: {
   const params = await props.params;
 
   const sessionId = params.id;
-  const session = sessionId === "1" ? session1 : sessionId === "2" ? session2 : null;
+  const session = sessionId === "1" ? session1 : sessionId === "2" ? session2 : sessionId === "3" ? session3 : sessionId === "4" ? session4 : null;
 
   if (!session) {
     notFound();
