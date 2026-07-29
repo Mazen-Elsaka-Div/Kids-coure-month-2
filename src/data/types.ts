@@ -1,10 +1,13 @@
 // Type definitions for the slide system
 
 export interface BlockNode {
-  type: "wrapper" | "action";
+  type: "wrapper" | "action" | "if-else";
   color: "blue" | "orange" | "purple" | "green" | "pink";
   label: string;
   children?: BlockNode[];
+  // Specific to if-else blocks
+  elseLabel?: string;
+  falseChildren?: BlockNode[];
 }
 
 export interface SlideData {

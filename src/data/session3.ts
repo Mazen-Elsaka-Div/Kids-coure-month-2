@@ -84,14 +84,22 @@ export const session3: SessionData = {
         "A happy child holding a colorful umbrella in the rain, ultra-realistic photography, professional lighting, bright colors, cinematic, highly detailed",
       visualBlocks: [
         {
-          type: "wrapper",
+          type: "if-else",
           color: "orange",
-          label: "IF it is raining:",
+          label: "IF it is raining (TRUE):",
           children: [
             {
               type: "action",
               color: "blue",
               label: "Take Umbrella ☂️"
+            }
+          ],
+          elseLabel: "ELSE (FALSE):",
+          falseChildren: [
+            {
+              type: "action",
+              color: "pink",
+              label: "Wear Sunglasses 🕶️"
             }
           ]
         }
@@ -194,7 +202,7 @@ export const session3: SessionData = {
         "A modern friendly robot looking at a checklist, high quality educational photography, bright classroom setting, realistic robot, no cartoons",
       visualBlocks: [
         {
-          type: "wrapper",
+          type: "if-else",
           color: "purple",
           label: "IF rule is TRUE:",
           children: [
@@ -203,13 +211,9 @@ export const session3: SessionData = {
               color: "blue",
               label: "Execute Action ✅"
             }
-          ]
-        },
-        {
-          type: "wrapper",
-          color: "purple",
-          label: "IF rule is FALSE:",
-          children: [
+          ],
+          elseLabel: "ELSE (FALSE):",
+          falseChildren: [
             {
               type: "action",
               color: "pink",

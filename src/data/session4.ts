@@ -184,7 +184,49 @@ export const session4: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 6,
+      id: 6, // Will be fixed by script
+      title: "The Infinite Loop",
+      emoji: "♾️",
+      type: "content",
+      content: [
+        "What happens if a computer doesn't know when to stop?",
+        "It keeps going FOREVER!",
+        "This is called an INFINITE LOOP.",
+        "The computer will get very tired and crash!"
+      ],
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "pink",
+          label: "Repeat FOREVER:",
+          children: [
+            {
+              type: "action",
+              color: "blue",
+              label: "Run in circles 🏃"
+            }
+          ]
+        }
+      ],
+      mascotMessage: "Oh no! Make sure to always tell the computer when to stop! 🛑",
+      teacherNotes: {
+        questions: [
+          "Can a human run forever?",
+          "What will the robot do if we say repeat forever?"
+        ],
+        expectedAnswers: [
+          "No, we get tired!",
+          "It will run until it breaks or runs out of battery!"
+        ],
+        tips: [
+          "Act out being a robot that is stuck in a loop"
+        ],
+        transition: "Let's program a human robot again.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 7,
       title: "Human Robot",
       emoji: "🤖",
       type: "activity",
@@ -218,7 +260,7 @@ export const session4: SessionData = {
       bgVariant: "blue",
     },
     {
-      id: 7,
+      id: 8,
       title: "Find the Loop",
       emoji: "🔍",
       type: "quiz",
@@ -252,7 +294,7 @@ export const session4: SessionData = {
       bgVariant: "orange",
     },
     {
-      id: 8,
+      id: 9,
       title: "Blockly Maze",
       emoji: "🧩",
       type: "game",
@@ -280,7 +322,7 @@ export const session4: SessionData = {
       bgVariant: "default",
     },
     {
-      id: 9,
+      id: 10,
       title: "Mini Challenge",
       emoji: "🏆",
       type: "activity",
@@ -330,7 +372,7 @@ export const session4: SessionData = {
       bgVariant: "green",
     },
     {
-      id: 10,
+      id: 11,
       title: "IF vs LOOP",
       emoji: "⚖️",
       type: "content",
@@ -383,7 +425,7 @@ export const session4: SessionData = {
       bgVariant: "orange",
     },
     {
-      id: 11,
+      id: 12,
       title: "Reflection",
       emoji: "💡",
       type: "review",
@@ -411,7 +453,7 @@ export const session4: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 12,
+      id: 13,
       title: "Homework",
       emoji: "🏠",
       type: "homework",
