@@ -109,10 +109,24 @@ export const session4: SessionData = {
       image: "/images/s4-daily-loops.png",
       imagePrompt:
         "A child brushing their teeth in a modern clean bathroom, looking in the mirror, ultra-realistic photography, bright morning light",
-      codeSnippet: [
-        "Repeat every morning:",
-        "  Wake up ☀️",
-        "  Brush teeth 🪥",
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "blue",
+          label: "Repeat every morning:",
+          children: [
+            {
+              type: "action",
+              color: "orange",
+              label: "Wake up ☀️"
+            },
+            {
+              type: "action",
+              color: "pink",
+              label: "Brush teeth 🪥"
+            }
+          ]
+        }
       ],
       newWord: {
         word: "Loop",
@@ -284,9 +298,19 @@ export const session4: SessionData = {
       image: "/images/s4-challenge.png",
       imagePrompt:
         "A smart child pointing at a computer screen looking proud, ultra-realistic photography, bright classroom, modern",
-      codeSnippet: [
-        "Repeat 4 Times:",
-        "  Move Forward 🚶",
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "purple",
+          label: "Repeat 4 Times:",
+          children: [
+            {
+              type: "action",
+              color: "blue",
+              label: "Move Forward 🚶"
+            }
+          ]
+        }
       ],
       mascotMessage: "You can do it! Think like a programmer! 🧠",
       teacherNotes: {
@@ -315,14 +339,31 @@ export const session4: SessionData = {
         "IF makes a decision ONCE.",
         "LOOP repeats an action MANY TIMES."
       ],
-      codeSnippet: [
-        "// IF (Decision)",
-        "IF it is raining:",
-        "  Open Umbrella ☂️",
-        "",
-        "// LOOP (Repeat)",
-        "Repeat 5 Times:",
-        "  Clap Hands 👏"
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "orange",
+          label: "IF it is raining:",
+          children: [
+            {
+              type: "action",
+              color: "blue",
+              label: "Open Umbrella ☂️"
+            }
+          ]
+        },
+        {
+          type: "wrapper",
+          color: "purple",
+          label: "Repeat 5 Times:",
+          children: [
+            {
+              type: "action",
+              color: "pink",
+              label: "Clap Hands 👏"
+            }
+          ]
+        }
       ],
       mascotMessage: "IF is for deciding, LOOP is for repeating! 🧠",
       teacherNotes: {

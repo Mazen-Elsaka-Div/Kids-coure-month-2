@@ -1,5 +1,12 @@
 // Type definitions for the slide system
 
+export interface BlockNode {
+  type: "wrapper" | "action";
+  color: "blue" | "orange" | "purple" | "green" | "pink";
+  label: string;
+  children?: BlockNode[];
+}
+
 export interface SlideData {
   id: number;
   title: string;
@@ -23,6 +30,8 @@ export interface SlideData {
   };
   // Code snippet specifically for kids
   codeSnippet?: string[];
+  // Visual scratch-like blocks
+  visualBlocks?: BlockNode[];
   // Quiz-specific fields
   quiz?: {
     question: string;

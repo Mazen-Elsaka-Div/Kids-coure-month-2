@@ -82,9 +82,19 @@ export const session3: SessionData = {
       image: "/images/s3-umbrella.png",
       imagePrompt:
         "A happy child holding a colorful umbrella in the rain, ultra-realistic photography, professional lighting, bright colors, cinematic, highly detailed",
-      codeSnippet: [
-        "IF it is raining:",
-        "  Take Umbrella ☂️",
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "orange",
+          label: "IF it is raining:",
+          children: [
+            {
+              type: "action",
+              color: "blue",
+              label: "Take Umbrella ☂️"
+            }
+          ]
+        }
       ],
       newWord: {
         word: "Decision",
@@ -124,11 +134,31 @@ export const session3: SessionData = {
       image: "/images/s3-traffic-light.png",
       imagePrompt:
         "A bright red traffic light on a city street, children waiting safely on the sidewalk, ultra-realistic photography, bright day, high quality",
-      codeSnippet: [
-        "IF traffic light is red:",
-        "  Stop 🛑",
-        "IF traffic light is green:",
-        "  Go 🟢",
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "orange",
+          label: "IF traffic light is red:",
+          children: [
+            {
+              type: "action",
+              color: "pink",
+              label: "Stop 🛑"
+            }
+          ]
+        },
+        {
+          type: "wrapper",
+          color: "orange",
+          label: "IF traffic light is green:",
+          children: [
+            {
+              type: "action",
+              color: "green",
+              label: "Go 🟢"
+            }
+          ]
+        }
       ],
       mascotMessage: "IF I see a carrot, I eat it! 🥕",
       teacherNotes: {
@@ -162,11 +192,31 @@ export const session3: SessionData = {
       image: "/images/s3-robot-thinking.png",
       imagePrompt:
         "A modern friendly robot looking at a checklist, high quality educational photography, bright classroom setting, realistic robot, no cartoons",
-      codeSnippet: [
-        "IF rule is TRUE:",
-        "  Execute Action ✅",
-        "IF rule is FALSE:",
-        "  Do Nothing ❌",
+      visualBlocks: [
+        {
+          type: "wrapper",
+          color: "purple",
+          label: "IF rule is TRUE:",
+          children: [
+            {
+              type: "action",
+              color: "blue",
+              label: "Execute Action ✅"
+            }
+          ]
+        },
+        {
+          type: "wrapper",
+          color: "purple",
+          label: "IF rule is FALSE:",
+          children: [
+            {
+              type: "action",
+              color: "pink",
+              label: "Do Nothing ❌"
+            }
+          ]
+        }
       ],
       mascotMessage: "Computers follow the rules exactly as written! 📏",
       teacherNotes: {
