@@ -7,6 +7,7 @@ import { QuizSlide } from "./QuizSlide";
 import { GameEmbed } from "./GameEmbed";
 import { VideoEmbed } from "./VideoEmbed";
 import { VisualBlocksContainer } from "./VisualBlocks";
+import { FlipCardsContainer } from "./FlipCards";
 
 export function SlideLayout({ slide }: { slide: SlideData }) {
   // Background variants
@@ -134,6 +135,11 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
               )}
             </div>
           </div>
+        )}
+
+        {/* Interactive Flip Cards */}
+        {slide.flipCards && slide.flipCards.length > 0 && (
+          <FlipCardsContainer cards={slide.flipCards} />
         )}
       </motion.div>
     </div>

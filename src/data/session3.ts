@@ -283,6 +283,12 @@ export const session3: SessionData = {
         "IF Snow ➔ Shiver (brrr)",
         "IF Night ➔ Go to sleep",
       ],
+      flipCards: [
+        { frontEmoji: "🌧️", frontText: "Rain", backEmoji: "☂️", backText: "Open Umbrella!" },
+        { frontEmoji: "☀️", frontText: "Sun", backEmoji: "😎", backText: "Sunglasses!" },
+        { frontEmoji: "❄️", frontText: "Snow", backEmoji: "🥶", backText: "Shiver!" },
+        { frontEmoji: "🌙", frontText: "Night", backEmoji: "😴", backText: "Go to sleep!" },
+      ],
       mascotMessage: "IF it's snowing, I need my coat! 🧥",
       teacherNotes: {
         questions: [

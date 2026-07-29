@@ -32,6 +32,13 @@ export interface SlideData {
   codeSnippet?: string[];
   // Visual scratch-like blocks
   visualBlocks?: BlockNode[];
+  // Interactive flip cards
+  flipCards?: {
+    frontEmoji: string;
+    frontText: string;
+    backEmoji: string;
+    backText: string;
+  }[];
   // Quiz-specific fields
   quiz?: {
     question: string;
