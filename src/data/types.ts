@@ -21,6 +21,8 @@ export interface SlideData {
     tips: string[];
     transition: string;
   };
+  // Code snippet specifically for kids
+  codeSnippet?: string[];
   // Quiz-specific fields
   quiz?: {
     question: string;

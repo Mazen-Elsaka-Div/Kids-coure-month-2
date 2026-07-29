@@ -109,6 +109,11 @@ export const session4: SessionData = {
       image: "/images/s4-daily-loops.png",
       imagePrompt:
         "A child brushing their teeth in a modern clean bathroom, looking in the mirror, ultra-realistic photography, bright morning light",
+      codeSnippet: [
+        "Repeat every morning:",
+        "  Wake up ☀️",
+        "  Brush teeth 🪥",
+      ],
       newWord: {
         word: "Loop",
         pronunciation: "LOOP",
@@ -279,6 +284,10 @@ export const session4: SessionData = {
       image: "/images/s4-challenge.png",
       imagePrompt:
         "A smart child pointing at a computer screen looking proud, ultra-realistic photography, bright classroom, modern",
+      codeSnippet: [
+        "Repeat 4 Times:",
+        "  Move Forward 🚶",
+      ],
       mascotMessage: "You can do it! Think like a programmer! 🧠",
       teacherNotes: {
         questions: [
@@ -298,6 +307,42 @@ export const session4: SessionData = {
     },
     {
       id: 10,
+      title: "IF vs LOOP",
+      emoji: "⚖️",
+      type: "content",
+      content: [
+        "What is the difference between IF and LOOP?",
+        "IF makes a decision ONCE.",
+        "LOOP repeats an action MANY TIMES."
+      ],
+      codeSnippet: [
+        "// IF (Decision)",
+        "IF it is raining:",
+        "  Open Umbrella ☂️",
+        "",
+        "// LOOP (Repeat)",
+        "Repeat 5 Times:",
+        "  Clap Hands 👏"
+      ],
+      mascotMessage: "IF is for deciding, LOOP is for repeating! 🧠",
+      teacherNotes: {
+        questions: [
+          "If I check the weather, is it IF or LOOP?",
+          "If I run around the track 3 times, is it IF or LOOP?"
+        ],
+        expectedAnswers: [
+          "IF!",
+          "LOOP!"
+        ],
+        tips: [
+          "Help students understand the difference clearly"
+        ],
+        transition: "Let's reflect on everything we learned!",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 11,
       title: "Reflection",
       emoji: "💡",
       type: "review",
@@ -325,7 +370,7 @@ export const session4: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 11,
+      id: 12,
       title: "Homework",
       emoji: "🏠",
       type: "homework",

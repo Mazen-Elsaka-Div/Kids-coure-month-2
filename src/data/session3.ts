@@ -82,6 +82,10 @@ export const session3: SessionData = {
       image: "/images/s3-umbrella.png",
       imagePrompt:
         "A happy child holding a colorful umbrella in the rain, ultra-realistic photography, professional lighting, bright colors, cinematic, highly detailed",
+      codeSnippet: [
+        "IF it is raining:",
+        "  Take Umbrella ☂️",
+      ],
       newWord: {
         word: "Decision",
         pronunciation: "de-SIZH-un",
@@ -120,6 +124,12 @@ export const session3: SessionData = {
       image: "/images/s3-traffic-light.png",
       imagePrompt:
         "A bright red traffic light on a city street, children waiting safely on the sidewalk, ultra-realistic photography, bright day, high quality",
+      codeSnippet: [
+        "IF traffic light is red:",
+        "  Stop 🛑",
+        "IF traffic light is green:",
+        "  Go 🟢",
+      ],
       mascotMessage: "IF I see a carrot, I eat it! 🥕",
       teacherNotes: {
         questions: [
@@ -152,6 +162,12 @@ export const session3: SessionData = {
       image: "/images/s3-robot-thinking.png",
       imagePrompt:
         "A modern friendly robot looking at a checklist, high quality educational photography, bright classroom setting, realistic robot, no cartoons",
+      codeSnippet: [
+        "IF rule is TRUE:",
+        "  Execute Action ✅",
+        "IF rule is FALSE:",
+        "  Do Nothing ❌",
+      ],
       mascotMessage: "Computers follow the rules exactly as written! 📏",
       teacherNotes: {
         questions: [

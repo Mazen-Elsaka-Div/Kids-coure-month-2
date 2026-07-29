@@ -120,6 +120,33 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
                 ))}
               </div>
 
+              {/* Code Snippet */}
+              {slide.codeSnippet && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6 }}
+                  className="mt-8 bg-slate-800 rounded-3xl p-6 shadow-xl border-4 border-slate-700 text-left overflow-hidden"
+                >
+                  <div className="flex gap-2 mb-4">
+                    <div className="w-4 h-4 rounded-full bg-red-500"></div>
+                    <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+                    <div className="w-4 h-4 rounded-full bg-green-500"></div>
+                  </div>
+                  <div className="space-y-2 font-mono text-xl md:text-2xl">
+                    {slide.codeSnippet.map((line, idx) => {
+                      // Simple syntax highlighting heuristic for kids
+                      const isKeyword = line.includes("IF") || line.includes("Repeat") || line.includes("ELSE");
+                      return (
+                        <div key={idx} className={`${line.startsWith(" ") ? "ml-8" : ""} ${isKeyword ? "text-pink-400 font-bold" : "text-green-300"}`}>
+                          {line}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+
               {/* New Word */}
               {slide.newWord && (
                 <div className="mt-12">
