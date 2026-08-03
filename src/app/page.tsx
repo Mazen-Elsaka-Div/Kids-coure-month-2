@@ -3,9 +3,10 @@ import { session1 } from "@/data/session1";
 import { session2 } from "@/data/session2";
 import { session3 } from "@/data/session3";
 import { session4 } from "@/data/session4";
+import { session5 } from "@/data/session5";
 
 export default function Home() {
-  const sessions = [session1, session2, session3, session4];
+  const sessions = [session1, session2, session3, session4, session5];
 
   return (
     <main className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-8">
