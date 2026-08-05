@@ -927,6 +927,10 @@
     pointer-events: none;
   }
 
+  .invisible {
+    visibility: hidden;
+  }
+
   .visible {
     visibility: visible;
   }
@@ -1187,10 +1191,6 @@
 
   .max-h-\[300px\] {
     max-height: 300px;
-  }
-
-  .max-h-\[340px\] {
-    max-height: 340px;
   }
 
   .min-h-full {
@@ -1786,10 +1786,6 @@
 
   .object-cover {
     object-fit: cover;
-  }
-
-  .object-top {
-    object-position: top;
   }
 
   .p-2 {
