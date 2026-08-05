@@ -187,7 +187,7 @@ export const curriculum: CurriculumSession[] = [
     task: "Make the sprite walk a full square and end where it started.",
     homework: "Make a sprite bounce around the stage forever without stopping.",
     carriesConcept: "X / Y coordinates",
-    status: "planned",
+    status: "done",
   },
   {
     id: 7,
@@ -212,7 +212,7 @@ export const curriculum: CurriculumSession[] = [
       "Build a walking cat together: move + next costume, repeated. Then make it grow and shrink.",
     task: "Make your sprite introduce itself in 3 speech bubbles while changing colour.",
     homework: "Animate any sprite so it looks like it is really walking.",
-    status: "planned",
+    status: "done",
   },
   {
     id: 8,
