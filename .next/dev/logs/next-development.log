@@ -1,2 +1,5 @@
-{"timestamp":"00:00:01.839","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:11.670","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:00.709","source":"Server","level":"LOG","message":"- Experiments (use with caution):"}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":"  · serverActions"}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":"  ✓ transitionIndicator"}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:04:53.984","source":"Server","level":"LOG","message":"  Reload env: .env.development.local"}
