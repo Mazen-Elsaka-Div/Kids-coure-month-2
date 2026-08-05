@@ -43,36 +43,41 @@ export function UiTour({ tour }: { tour: Tour }) {
         </div>
       </div>
 
-      {/* Right: the zoomed real crop + what it does */}
-      <div className="w-full lg:flex-1 flex flex-col gap-6">
-        <div>
-          <p className="font-outfit font-bold text-sm uppercase tracking-widest text-orange-500 mb-3">
-            {tour.detailLabel}
-          </p>
+      {/* Right: the zoomed real crop + what it does.
+          Tall crops (palettes) sit beside the facts so they stay readable;
+          wide crops stack above them. */}
+      <div className="w-full lg:flex-1 flex flex-col gap-5">
+        <p className="font-outfit font-bold text-sm uppercase tracking-widest text-orange-500">
+          {tour.detailLabel}
+        </p>
+        <div className={tour.detailTall ? "flex gap-5 items-start" : "flex flex-col gap-5"}>
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="rounded-2xl overflow-hidden bg-white shadow-lg ring-1 ring-slate-900/10"
+            className="rounded-2xl overflow-hidden bg-white shadow-lg ring-1 ring-slate-900/10 shrink-0"
           >
             <img
               src={tour.detailImage}
               alt={tour.detailLabel}
-              className={`w-full block object-cover object-top ${
-                tour.detailTall ? "max-h-[340px]" : ""
-              }`}
+              className={
+                tour.detailTall
+                  ? "h-[430px] w-auto block"
+                  : "w-full max-h-[300px] object-contain block"
+              }
             />
           </motion.div>
-        </div>
 
-        <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-3">
           {tour.facts.map((fact, i) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, x: -12 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 + i * 0.09 }}
-              className="flex gap-3 items-start font-inter text-lg md:text-xl text-slate-700 leading-relaxed"
+              className={`flex gap-3 items-start font-inter text-slate-700 leading-relaxed ${
+                tour.detailTall ? "text-base md:text-lg" : "text-lg md:text-xl"
+              }`}
             >
               <span
                 aria-hidden="true"
@@ -80,8 +85,9 @@ export function UiTour({ tour }: { tour: Tour }) {
               />
               <span>{fact}</span>
             </motion.li>
-          ))}
-        </ul>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

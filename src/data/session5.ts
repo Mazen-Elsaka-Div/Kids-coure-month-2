@@ -268,7 +268,7 @@ export const session5: SessionData = {
         wideImage: WIDE,
         detailImage: "/images/scratch/flag-stop.png",
         detailLabel: "The two most used buttons in Scratch",
-        region: { x: 65.3, y: 5.6, w: 7.6, h: 4.7 },
+        region: { x: 64.6, y: 5.3, w: 35.4, h: 5.3 },
         facts: [
           "🟢 Green Flag = GO. This is the PLAY button for your game.",
           "🔴 Red Circle = STOP. It stops everything right now.",
@@ -343,7 +343,7 @@ export const session5: SessionData = {
         wideImage: WIDE,
         detailImage: "/images/scratch/add-sprite.png",
         detailLabel: "The purple cat button (bottom right)",
-        region: { x: 88, y: 91.5, w: 6.6, h: 8 },
+        region: { x: 86.1, y: 87.8, w: 13.9, h: 12.2 },
         facts: [
           "Click the purple cat with the + to add a new character.",
           "You can have as many sprites as you like.",
