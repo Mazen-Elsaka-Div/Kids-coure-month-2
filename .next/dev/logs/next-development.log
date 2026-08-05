@@ -59,3 +59,4 @@
 {"timestamp":"00:27:50.548","source":"Server","level":"INFO","message":"[browser] \"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools\""}
 {"timestamp":"00:27:50.548","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
 {"timestamp":"00:28:27.908","source":"Server","level":"LOG","message":"  Reload env: .env.development.local"}
+{"timestamp":"00:36:43.574","source":"Server","level":"LOG","message":"  Reload env: .env.development.local"}
