@@ -8,6 +8,7 @@ import { GameEmbed } from "./GameEmbed";
 import { VideoEmbed } from "./VideoEmbed";
 import { VisualBlocksContainer } from "./VisualBlocks";
 import { FlipCardsContainer } from "./FlipCards";
+import { UiTour } from "./UiTour";
 
 export function SlideLayout({ slide }: { slide: SlideData }) {
   // Background variants
@@ -21,6 +22,9 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
 
   const bgClass = bgClasses[slide.bgVariant || "default"];
 
+  // Screenshot tours need the vertical room, so the heading gets compact.
+  const compact = slide.type === "ui-tour";
+
   return (
     <div className={`min-h-screen pt-24 pb-32 px-8 flex flex-col items-center justify-center transition-colors duration-500 ${bgClass}`}>
       <motion.div
@@ -32,19 +36,28 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
         className="w-full max-w-6xl mx-auto flex flex-col items-center"
       >
         {/* Title */}
-        <div className="text-center mb-8">
+        <div className={compact ? "flex items-center gap-4 self-start mb-6" : "text-center mb-8"}>
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", bounce: 0.5, delay: 0.2 }}
-            className="text-6xl mb-4"
+            className={compact ? "text-4xl" : "text-6xl mb-4"}
           >
             {slide.emoji}
           </motion.div>
-          <h2 className="font-outfit font-extrabold text-5xl md:text-6xl text-slate-800 tracking-tight">
+          <h2
+            className={`font-outfit font-extrabold text-slate-800 tracking-tight ${
+              compact ? "text-3xl md:text-4xl" : "text-5xl md:text-6xl"
+            }`}
+          >
             {slide.title}
           </h2>
         </div>
+
+        {/* Real-screenshot tour of the Scratch editor */}
+        {slide.type === "ui-tour" && slide.uiTour && (
+          <UiTour tour={slide.uiTour} />
+        )}
 
         {/* Content Type specific rendering */}
         {slide.type === "quiz" && slide.quiz && (
@@ -121,6 +134,28 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
                   </motion.p>
                 ))}
               </div>
+
+              {/* Step-by-step instructions for activities */}
+              {slide.activitySteps && slide.activitySteps.length > 0 && (
+                <ol className="mt-8 flex flex-col gap-3 text-left">
+                  {slide.activitySteps.map((step, idx) => (
+                    <motion.li
+                      key={idx}
+                      initial={{ opacity: 0, x: -14 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.45 + idx * 0.09 }}
+                      className="flex gap-4 items-start bg-white/80 rounded-2xl px-5 py-4 shadow-sm ring-1 ring-slate-900/5"
+                    >
+                      <span className="font-fira font-bold text-lg w-8 h-8 shrink-0 rounded-full bg-slate-800 text-slate-50 flex items-center justify-center">
+                        {idx + 1}
+                      </span>
+                      <span className="font-inter text-xl text-slate-700 leading-relaxed">
+                        {step}
+                      </span>
+                    </motion.li>
+                  ))}
+                </ol>
+              )}
 
               {/* Visual Blocks */}
               {slide.visualBlocks && slide.visualBlocks.length > 0 && (

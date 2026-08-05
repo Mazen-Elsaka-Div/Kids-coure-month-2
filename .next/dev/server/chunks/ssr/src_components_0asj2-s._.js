@@ -1072,7 +1072,7 @@ function SlideLayout({ slide }) {
                             children: slide.emoji
                         }, void 0, false, {
                             fileName: "[project]/src/components/SlideLayout.tsx",
-                            lineNumber: 36,
+                            lineNumber: 37,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1080,34 +1080,34 @@ function SlideLayout({ slide }) {
                             children: slide.title
                         }, void 0, false, {
                             fileName: "[project]/src/components/SlideLayout.tsx",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 35,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, this),
                 slide.type === "quiz" && slide.quiz && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$QuizSlide$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["QuizSlide"], {
                     quiz: slide.quiz
                 }, void 0, false, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 51,
+                    lineNumber: 52,
                     columnNumber: 11
                 }, this),
                 slide.type === "game" && slide.gameUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$GameEmbed$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GameEmbed"], {
                     url: slide.gameUrl
                 }, void 0, false, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 11
                 }, this),
                 slide.type === "video" && slide.videoUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$VideoEmbed$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VideoEmbed"], {
                     url: slide.videoUrl
                 }, void 0, false, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 59,
+                    lineNumber: 60,
                     columnNumber: 11
                 }, this),
                 slide.type === "review" && slide.reviewPoints && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1130,17 +1130,17 @@ function SlideLayout({ slide }) {
                                 children: point
                             }, idx, false, {
                                 fileName: "[project]/src/components/SlideLayout.tsx",
-                                lineNumber: 66,
+                                lineNumber: 67,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/SlideLayout.tsx",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 63,
+                    lineNumber: 64,
                     columnNumber: 11
                 }, this),
                 (slide.type === "content" || slide.type === "homework" || slide.type === "activity") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1175,12 +1175,12 @@ function SlideLayout({ slide }) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/SlideLayout.tsx",
-                                lineNumber: 92,
+                                lineNumber: 93,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/SlideLayout.tsx",
-                            lineNumber: 85,
+                            lineNumber: 86,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1204,19 +1204,19 @@ function SlideLayout({ slide }) {
                                             children: text
                                         }, idx, false, {
                                             fileName: "[project]/src/components/SlideLayout.tsx",
-                                            lineNumber: 113,
+                                            lineNumber: 114,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/SlideLayout.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 112,
                                     columnNumber: 15
                                 }, this),
                                 slide.visualBlocks && slide.visualBlocks.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$VisualBlocks$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VisualBlocksContainer"], {
                                     blocks: slide.visualBlocks
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/SlideLayout.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 128,
                                     columnNumber: 17
                                 }, this),
                                 slide.newWord && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1225,42 +1225,42 @@ function SlideLayout({ slide }) {
                                         wordData: slide.newWord
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/SlideLayout.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 134,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/SlideLayout.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 133,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/SlideLayout.tsx",
-                            lineNumber: 110,
+                            lineNumber: 111,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 82,
+                    lineNumber: 83,
                     columnNumber: 11
                 }, this),
                 slide.flipCards && slide.flipCards.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$FlipCards$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FlipCardsContainer"], {
                     cards: slide.flipCards
                 }, void 0, false, {
                     fileName: "[project]/src/components/SlideLayout.tsx",
-                    lineNumber: 142,
+                    lineNumber: 143,
                     columnNumber: 11
                 }, this)
             ]
         }, `slide-content-${slide.id}`, true, {
             fileName: "[project]/src/components/SlideLayout.tsx",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/SlideLayout.tsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }

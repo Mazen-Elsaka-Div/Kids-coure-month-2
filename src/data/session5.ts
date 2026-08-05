@@ -1,321 +1,747 @@
 import { SessionData } from "./types";
 
+const WIDE = "/images/scratch/editor-full.webp";
+
 export const session5: SessionData = {
   id: 5,
-  title: "Introduction to Scratch",
-  subtitle: "Let's Start Coding!",
+  title: "Inside Scratch",
+  subtitle: "A Real Tour of the Screen",
   emoji: "🐱",
-  description: "Welcome to Scratch! The easiest and most fun way to make your own games and stories.",
+  description:
+    "We open the real Scratch editor and learn the name and the job of every single part of the screen.",
   color: "#F59E0B", // Orange
   slides: [
     {
       id: 1,
-      title: "What is Scratch?",
+      title: "What Can We Build?",
       emoji: "📺",
       type: "video",
-      content: ["Let's watch this video to see all the cool things we can make!"],
+      content: ["Let's watch what other kids made with Scratch!"],
       videoUrl: "https://www.youtube.com/embed/S2pE8-v2n5k",
-      mascotMessage: "You can make games, stories, and animations! 🎮",
+      mascotMessage: "Games, stories, cartoons, music — all of it! 🎮",
       teacherNotes: {
-        questions: ["What did you see in the video?", "Do you want to make your own game?"],
-        expectedAnswers: ["I saw games!", "Yes!"],
-        tips: ["Show excitement about what they are about to learn."],
-        transition: "Let's meet our new friend in Scratch!",
+        questions: [
+          "Which project did you like the most?",
+          "What would YOU like to build?",
+        ],
+        expectedAnswers: ["The game one!", "A game about a dragon!"],
+        tips: [
+          "Keep this short — 3 minutes maximum. It is only a hook.",
+          "Write their answers on paper. You will use them in Session 20 (Capstone).",
+        ],
+        transition:
+          "All of those were made on ONE screen. Let's open it and learn every part.",
       },
       bgVariant: "blue",
     },
     {
       id: 2,
-      title: "Meet Scratch Cat!",
-      emoji: "😺",
+      title: "This Is Scratch",
+      emoji: "🖥️",
       type: "content",
       content: [
-        "This is Scratch Cat!",
-        "He is our main character, also called a SPRITE.",
-        "A Sprite is a character or object we can program."
+        "This is the REAL Scratch screen.",
+        "It looks like a lot at first. It is not!",
+        "It is only 4 big areas, and today we learn all of them.",
       ],
-      image: "/images/s5-scratch-cat.png",
-      imagePrompt: "The Scratch Cat character waving happily, 2d cartoon style, bright white background",
-      newWord: {
-        word: "Sprite",
-        pronunciation: "SPRY-T",
-        meaning: "A character or object in Scratch that you can program",
-        example: "My game has a cat sprite and a dog sprite.",
-      },
-      mascotMessage: "Meow! I am ready to follow your code! 🐾",
+      image: WIDE,
+      mascotMessage: "Don't panic. By the end of today you will know it all! 💪",
       teacherNotes: {
-        questions: ["What is a Sprite?", "Can a car be a Sprite?"],
-        expectedAnswers: ["A character we program", "Yes!"],
-        tips: ["Explain that anything they add to the screen to code is a sprite."],
-        transition: "Where does the Sprite live? Let's find out!",
-      },
-      bgVariant: "orange",
-    },
-    {
-      id: 3,
-      title: "The Stage",
-      emoji: "🎭",
-      type: "content",
-      content: [
-        "The STAGE is where our Sprites live and play.",
-        "It's like a TV screen for our game.",
-        "Everything our code does happens on the Stage!"
-      ],
-      image: "/images/s5-scratch-stage.png",
-      imagePrompt: "A simple theater stage with a curtain, bright colors, 2d vector art",
-      newWord: {
-        word: "Stage",
-        pronunciation: "STAY-J",
-        meaning: "The screen where your game or story happens",
-        example: "The cat sprite is walking on the stage.",
-      },
-      mascotMessage: "The Stage is our playground! 🎡",
-      teacherNotes: {
-        questions: ["If the Sprite is an actor, what is the Stage?"],
-        expectedAnswers: ["The theater where they act!"],
-        tips: ["Compare the stage to a real-life theater stage or a movie screen."],
-        transition: "How do we tell the Sprite what to do?",
-      },
-      bgVariant: "purple",
-    },
-    {
-      id: 4,
-      title: "Blocks = Instructions",
-      emoji: "🧩",
-      type: "content",
-      content: [
-        "We don't write words to program in Scratch.",
-        "We use colorful BLOCKS!",
-        "We snap them together like Lego."
-      ],
-      visualBlocks: [
-        {
-          type: "action",
-          color: "blue",
-          label: "Move 10 steps 🚶"
-        },
-        {
-          type: "action",
-          color: "purple",
-          label: "Say Hello! 👋"
-        }
-      ],
-      mascotMessage: "Code blocks snap together just like puzzle pieces! 🧩",
-      teacherNotes: {
-        questions: ["Do we need to type hard words to program?", "What do we use instead?"],
-        expectedAnswers: ["No!", "Blocks!"],
-        tips: ["Show how block colors mean different things (Blue for movement, Purple for looks)."],
-        transition: "Let's see our first block!",
+        questions: [
+          "How many different areas can you spot?",
+          "Which part do you think is the most important?",
+        ],
+        expectedAnswers: ["Three? Four?", "The cat one!"],
+        tips: [
+          "Open scratch.mit.edu/projects/editor on the projector next to this slide.",
+          "Point with your finger at the screen as you say each name.",
+          "Do NOT explain anything yet. Just let them look for 30 seconds.",
+        ],
+        transition: "Let's start at the top-left corner.",
       },
       bgVariant: "default",
     },
     {
-      id: 5,
-      title: "The Move Block",
-      emoji: "🏃",
-      type: "activity",
-      content: [
-        "The blue MOVE block makes the Sprite walk.",
-        "Let's pretend to be the Scratch Cat!"
-      ],
-      activitySteps: [
-        "Teacher shows the Move 10 steps block.",
-        "Students take a step forward.",
-        "Change the number! Move 3 steps.",
-        "Students take 3 steps."
-      ],
-      visualBlocks: [
-        {
-          type: "action",
-          color: "blue",
-          label: "move ( 3 ) steps"
-        }
-      ],
-      mascotMessage: "The bigger the number, the further I walk! 👟",
-      teacherNotes: {
-        questions: ["What happens if we say Move 100 steps?"],
-        expectedAnswers: ["We move really far!"],
-        tips: ["Have the kids physically walk to understand the 'steps' concept."],
-        transition: "How do we make the code actually start?",
+      id: 3,
+      title: "The 3 Tabs",
+      emoji: "🗂️",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/tabs.png",
+        detailLabel: "Code · Costumes · Sounds",
+        region: { x: 0, y: 5.3, w: 22.2, h: 5.8 },
+        facts: [
+          "Code — where we build the program. We live here.",
+          "Costumes — where we draw and change how a character LOOKS.",
+          "Sounds — where we pick and edit the noises it makes.",
+        ],
       },
-      bgVariant: "green",
-    },
-    {
-      id: 6,
-      title: "Green Flag & Stop Sign",
-      emoji: "🏁",
-      type: "content",
-      content: [
-        "The Green Flag means GO! (Start the program)",
-        "The Red Stop Sign means STOP! (End the program)",
-        "Every game needs a way to start!"
-      ],
-      visualBlocks: [
-        {
-          type: "wrapper",
-          color: "orange",
-          label: "When 🟢 Flag clicked",
-          children: [
-            {
-              type: "action",
-              color: "blue",
-              label: "move ( 10 ) steps"
-            }
-          ]
-        }
-      ],
-      mascotMessage: "Always start your code with a Yellow Event Block! 🚦",
+      newWord: {
+        word: "Tab",
+        pronunciation: "TAB",
+        meaning: "A button at the top that switches to a different room",
+        example: "Click the Costumes tab to draw your cat.",
+      },
+      mascotMessage: "3 tabs = 3 rooms. Code is our favourite room! 🚪",
       teacherNotes: {
-        questions: ["What button do we press to play our game?", "What if things go wrong and we need to stop?"],
-        expectedAnswers: ["The Green Flag!", "Press the Red Stop Sign!"],
-        tips: ["Emphasize that the Green flag is the 'Play' button for their games."],
-        transition: "Let's test our knowledge!",
+        questions: [
+          "If I want to make my cat purple, which tab do I click?",
+          "If I want my cat to say hello, which tab?",
+        ],
+        expectedAnswers: ["Costumes!", "Code!"],
+        tips: [
+          "Click each tab live so they see the whole screen change.",
+          "Always come back to Code so they learn it is 'home'.",
+        ],
+        transition: "Inside the Code tab there is a rainbow of buttons. Look.",
       },
       bgVariant: "blue",
     },
     {
-      id: 7,
-      title: "Quick Quiz!",
-      emoji: "❓",
-      type: "quiz",
-      content: [
-        "Let's see what you remember about Scratch!"
-      ],
-      quiz: {
-        question: "What do we call the character we program in Scratch?",
-        options: [
-          "A Stage",
-          "A Sprite",
-          "A Block",
-          "A Flag"
+      id: 4,
+      title: "The Colour Menu",
+      emoji: "🌈",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/categories.png",
+        detailLabel: "The 9 block categories",
+        detailTall: true,
+        region: { x: 0, y: 10.2, w: 4.5, h: 82 },
+        facts: [
+          "Every colour is a different KIND of instruction.",
+          "Blue = Motion (moving). Purple = Looks (showing).",
+          "Yellow = Events (starting). Orange = Control (repeating).",
+          "Click a colour and the blocks of that colour appear.",
         ],
-        correctIndex: 1,
       },
-      mascotMessage: "You can do it! Think about the Cat! 🐱",
+      newWord: {
+        word: "Category",
+        pronunciation: "CAT-uh-gor-ee",
+        meaning: "A group of things that belong together",
+        example: "The Motion category has all the moving blocks.",
+      },
+      mascotMessage: "Colour tells you the job. Blue always means moving! 🎨",
       teacherNotes: {
-        questions: ["Can you name a sprite you'd want to use?"],
-        expectedAnswers: ["A car, a dinosaur, a wizard!"],
-        tips: ["Praise correct answers."],
-        transition: "Let's try one more quiz!",
-      },
-      bgVariant: "orange",
-    },
-    {
-      id: 8,
-      title: "Another Quiz!",
-      emoji: "🧠",
-      type: "quiz",
-      content: [
-        "One more question to make sure you are Scratch Masters!"
-      ],
-      quiz: {
-        question: "Which button starts our code?",
-        options: [
-          "The Blue Block",
-          "The Red Stop Sign",
-          "The Green Flag",
-          "The Spacebar"
+        questions: [
+          "What colour do you think 'jump' would be?",
+          "What colour makes a sound?",
         ],
-        correctIndex: 2,
-      },
-      mascotMessage: "Green means GO! 🟢",
-      teacherNotes: {
-        questions: ["What does the red button do?"],
-        expectedAnswers: ["Stop the program!"],
-        tips: ["Reinforce the start and stop mechanics."],
-        transition: "Now, let's look at what we'll do today on the computer.",
+        expectedAnswers: ["Blue, because it moves!", "Pink / Sound!"],
+        tips: [
+          "Only name Motion, Looks, Sound, Events and Control today. Skip the rest.",
+          "Tell them the last 4 are 'for later sessions' — it builds excitement.",
+        ],
+        transition: "Click Motion, and look at what appears right next to it.",
       },
       bgVariant: "purple",
     },
     {
-      id: 9,
-      title: "Your First Program",
-      emoji: "💻",
-      type: "activity",
-      content: [
-        "Today, we will go on the computer and open Scratch.",
-        "Your mission:",
-        "1. Make the cat move.",
-        "2. Make the cat say 'Hello!'"
-      ],
-      activitySteps: [
-        "Open Scratch.",
-        "Drag a 'When Green Flag Clicked' block.",
-        "Drag a 'Move 10 steps' block.",
-        "Drag a 'Say Hello' block.",
-        "Click the Green Flag!"
-      ],
-      visualBlocks: [
-        {
-          type: "wrapper",
-          color: "orange",
-          label: "When 🟢 Flag clicked",
-          children: [
-            {
-              type: "action",
-              color: "blue",
-              label: "move ( 10 ) steps"
-            },
-            {
-              type: "action",
-              color: "purple",
-              label: "say [ Hello! ] for ( 2 ) seconds"
-            }
-          ]
-        }
-      ],
-      mascotMessage: "I can't wait to walk and talk! 💬",
+      id: 5,
+      title: "The Blocks Palette",
+      emoji: "🧩",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/palette.webp",
+        detailLabel: "The Blocks Palette",
+        detailTall: true,
+        region: { x: 0, y: 10.2, w: 21.9, h: 82 },
+        facts: [
+          "This is the BOX OF LEGO. Every block we own lives here.",
+          "Blocks in here do nothing — they are only waiting.",
+          "You scroll down to find more.",
+          "You never run out! Dragging one out makes a copy.",
+        ],
+      },
+      newWord: {
+        word: "Palette",
+        pronunciation: "PAL-ett",
+        meaning: "The list on the left holding all the blocks you can use",
+        example: "Find the move block in the palette.",
+      },
+      mascotMessage: "It is a box of Lego. Take as many as you want! 🧱",
       teacherNotes: {
-        questions: ["Are you ready to code?"],
-        expectedAnswers: ["YES!"],
-        tips: ["Leave this slide up while the kids move to the computers.", "Walk around and help them snap the blocks together."],
-        transition: "Time to wrap up!",
+        questions: [
+          "If I drag a block out, does it disappear from the list?",
+          "How do we see more blocks?",
+        ],
+        expectedAnswers: ["No, it makes a copy!", "Scroll down!"],
+        tips: [
+          "Drag the same block out 3 times to prove it never runs out. Kids love this.",
+          "Let them scroll the palette themselves for 20 seconds.",
+        ],
+        transition: "So where do the blocks GO when we drag them out?",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 6,
+      title: "The Code Area",
+      emoji: "📋",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/code-area.webp",
+        detailLabel: "The Code Area (the big empty space)",
+        region: { x: 21.7, y: 10.2, w: 44.4, h: 47.8 },
+        facts: [
+          "This is your WORK TABLE. Drag blocks here to build.",
+          "Blocks only work when they are snapped together here.",
+          "The order matters — Scratch reads from top to bottom.",
+          "To delete a block: drag it back into the palette.",
+        ],
+      },
+      newWord: {
+        word: "Script",
+        pronunciation: "SKRIPT",
+        meaning: "A stack of blocks joined together — a program",
+        example: "My script makes the cat walk and then talk.",
+      },
+      mascotMessage: "Top to bottom, just like reading a book! 📖",
+      teacherNotes: {
+        questions: [
+          "Which block runs first — the top one or the bottom one?",
+          "How do you throw a block away?",
+        ],
+        expectedAnswers: ["The top one!", "Drag it back to the left!"],
+        tips: [
+          "This is the Session 1 lesson again: ORDER MATTERS. Say that out loud.",
+          "Demonstrate deleting by dragging back — they will need this constantly.",
+        ],
+        transition:
+          "Now the best part. Where do we actually SEE our game happen?",
       },
       bgVariant: "green",
     },
     {
-      id: 10,
-      title: "Reflection",
-      emoji: "💡",
-      type: "review",
-      content: [
-        "Wow, you are all real programmers now!",
-      ],
-      reviewPoints: [
-        "What is a Sprite?",
-        "What is the Stage?",
-        "How do we start our program?",
-        "What did your Scratch Cat do today?"
-      ],
-      mascotMessage: "I loved moving around today! Thank you! 💖",
+      id: 7,
+      title: "The Stage",
+      emoji: "🎭",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/stage.webp",
+        detailLabel: "The Stage (the white box, top right)",
+        region: { x: 65.9, y: 10.2, w: 33.3, h: 42 },
+        facts: [
+          "This is the TV SCREEN. Your game happens here.",
+          "The characters walk, jump and talk inside this box.",
+          "It is the only part a player of your game would see.",
+          "You can drag your character around it with the mouse.",
+        ],
+      },
+      newWord: {
+        word: "Stage",
+        pronunciation: "STAY-J",
+        meaning: "The white box where your game or story is shown",
+        example: "The cat is dancing on the stage.",
+      },
+      mascotMessage: "The Stage is my theatre. I perform here! 🎬",
       teacherNotes: {
-        questions: ["Who wants to share what their cat did?"],
-        expectedAnswers: ["(Students share their programs)"],
-        tips: ["Celebrate their first successful program."],
-        transition: "Don't forget your homework!",
+        questions: [
+          "If the cat is an actor, what is the Stage?",
+          "Can the cat walk outside the white box?",
+        ],
+        expectedAnswers: ["The theatre!", "No, it stops at the edge!"],
+        tips: [
+          "Drag the cat around the stage with the mouse live. Then off the edge — it stops.",
+          "Compare it to a TV screen or a phone screen.",
+        ],
+        transition: "Above the stage there are two little buttons. Very important.",
       },
       bgVariant: "blue",
     },
     {
+      id: 8,
+      title: "Green Flag & Stop",
+      emoji: "🏁",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/flag-stop.png",
+        detailLabel: "The two most used buttons in Scratch",
+        region: { x: 64.6, y: 5.3, w: 35.4, h: 5.3 },
+        facts: [
+          "🟢 Green Flag = GO. This is the PLAY button for your game.",
+          "🔴 Red Circle = STOP. It stops everything right now.",
+          "The flag only works if your script starts with a yellow hat block.",
+          "When something goes crazy — press red. Nothing breaks.",
+        ],
+      },
+      mascotMessage: "Green means go, red means stop. Like a traffic light! 🚦",
+      teacherNotes: {
+        questions: [
+          "This is like something we learned in Session 3. What?",
+          "What do you press when your cat goes crazy?",
+        ],
+        expectedAnswers: ["The traffic light!", "The red stop button!"],
+        tips: [
+          "Call back to the Session 3 traffic light slide — they will remember it.",
+          "Reassure them: pressing stop never breaks or deletes anything.",
+        ],
+        transition:
+          "Under the stage is a panel that tells us everything about our character.",
+      },
+      bgVariant: "green",
+    },
+    {
+      id: 9,
+      title: "The Sprite Pane",
+      emoji: "😺",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/sprite-pane.png",
+        detailLabel: "The Sprite Pane (under the stage)",
+        region: { x: 65.9, y: 51.4, w: 28.8, h: 27.8 },
+        facts: [
+          "Every character in your game is a SPRITE. This is the list of them.",
+          "Sprite — its name. You can rename it to 'Player' or 'Enemy'.",
+          "x and y — exactly where it is standing. (We master this next session!)",
+          "Size — how big. Direction — which way it is facing.",
+          "Show / Hide — the eye buttons make it visible or invisible.",
+        ],
+      },
+      newWord: {
+        word: "Sprite",
+        pronunciation: "SPRY-T",
+        meaning: "A character or object in your game that you can program",
+        example: "My game has a cat sprite and a ball sprite.",
+      },
+      mascotMessage: "I am a Sprite! My name is Sprite1. 🐾",
+      teacherNotes: {
+        questions: [
+          "Can a ball be a Sprite? Can a pizza?",
+          "Which number moves the cat left and right?",
+        ],
+        expectedAnswers: ["Yes! Anything can!", "The x one!"],
+        tips: [
+          "Type a new name into the Sprite box live so they see it change.",
+          "Type Size 200 then Size 30 — huge laughs, and it makes the idea stick.",
+          "Do NOT explain x and y deeply. Just plant the seed for Session 6.",
+        ],
+        transition: "But how do we get a SECOND character?",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 10,
+      title: "Add a Sprite",
+      emoji: "➕",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/add-sprite.png",
+        detailLabel: "The purple cat button (bottom right)",
+        region: { x: 86.1, y: 87.8, w: 13.9, h: 12.2 },
+        facts: [
+          "Click the purple cat with the + to add a new character.",
+          "You can have as many sprites as you like.",
+          "Each sprite has its OWN code. Very important!",
+          "Hover it for more choices: paint your own, or get a surprise one.",
+        ],
+      },
+      mascotMessage: "Give me a friend! Add a dog. Or a dragon! 🐉",
+      teacherNotes: {
+        questions: [
+          "If I add a dog, does the dog use the cat's code?",
+          "How many sprites can we have?",
+        ],
+        expectedAnswers: ["No! Its own code!", "Lots and lots!"],
+        tips: [
+          "'Each sprite has its own code' is the #1 thing beginners get confused by. Repeat it.",
+          "Click the cat sprite then the new sprite to show the Code Area emptying.",
+        ],
+        transition: "Clicking that button opens a huge library. Look at this.",
+      },
+      bgVariant: "orange",
+    },
+    {
       id: 11,
+      title: "The Sprite Library",
+      emoji: "🦇",
+      type: "content",
+      content: [
+        "Hundreds of ready-made characters!",
+        "Animals, people, food, letters, fantasy...",
+        "Use the search box, or the category buttons at the top.",
+      ],
+      image: "/images/scratch/sprite-library.webp",
+      mascotMessage: "Pick a bear. Pick a banana. Pick anything! 🍌",
+      teacherNotes: {
+        questions: [
+          "Which sprite do you want in YOUR game?",
+          "How would you find a dragon quickly?",
+        ],
+        expectedAnswers: ["The dragon!", "Type it in the search box!"],
+        tips: [
+          "Give them 60 seconds to browse. They need this exploration time.",
+          "Teach the search box — it saves a lot of scrolling later.",
+        ],
+        transition: "There is a matching library for the BACKGROUND too.",
+      },
+      bgVariant: "default",
+    },
+    {
+      id: 12,
+      title: "Backdrops",
+      emoji: "🏞️",
+      type: "ui-tour",
+      content: [],
+      uiTour: {
+        wideImage: WIDE,
+        detailImage: "/images/scratch/backdrop-panel.png",
+        detailLabel: "The Stage panel (far right)",
+        region: { x: 94.2, y: 51.4, w: 5.2, h: 27.8 },
+        facts: [
+          "A BACKDROP is the picture behind your sprites.",
+          "This thin panel on the far right is where you change it.",
+          "It says 'Backdrops 1' — right now we only have a plain white one.",
+          "Click it, then the picture button, to choose a new one.",
+        ],
+      },
+      newWord: {
+        word: "Backdrop",
+        pronunciation: "BACK-drop",
+        meaning: "The background picture behind everything on the stage",
+        example: "I chose the space backdrop for my rocket game.",
+      },
+      mascotMessage: "White is boring. Put me on a beach! 🏖️",
+      teacherNotes: {
+        questions: [
+          "What is the difference between a Sprite and a Backdrop?",
+          "Can a Backdrop walk around?",
+        ],
+        expectedAnswers: [
+          "Sprites move, backdrops stay behind!",
+          "No, it is just a picture!",
+        ],
+        tips: [
+          "This is the most-missed panel because it is so thin. Point right at it.",
+          "The Sprite vs Backdrop difference is worth 30 extra seconds.",
+        ],
+        transition: "Here is the backdrop library.",
+      },
+      bgVariant: "blue",
+    },
+    {
+      id: 13,
+      title: "The Backdrop Library",
+      emoji: "🌌",
+      type: "content",
+      content: [
+        "Space, castles, beaches, forests, football fields!",
+        "One click and your whole world changes.",
+        "The backdrop sets the STORY of your game.",
+      ],
+      image: "/images/scratch/backdrop-library.webp",
+      mascotMessage: "Space, please! I want to be an astronaut cat! 🚀",
+      teacherNotes: {
+        questions: [
+          "If I pick the castle backdrop, what kind of game is it?",
+          "What backdrop for a football game?",
+        ],
+        expectedAnswers: ["A knight game! A dragon game!", "The football one!"],
+        tips: [
+          "Backdrop first, then story — this is a great habit for planning projects.",
+          "Add one live so they see the white box fill with a picture.",
+        ],
+        transition: "Two rooms left. Remember the tabs? Let's visit Costumes.",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 14,
+      title: "The Costumes Room",
+      emoji: "🎨",
+      type: "content",
+      content: [
+        "A COSTUME is one picture of your sprite.",
+        "The cat has 2 costumes — look at the left list!",
+        "Swapping costumes fast is how we make it look like WALKING.",
+        "You can paint, colour and resize with the tools.",
+      ],
+      image: "/images/scratch/costumes.webp",
+      newWord: {
+        word: "Costume",
+        pronunciation: "KOS-tyoom",
+        meaning: "One picture of a sprite. Sprites can have many.",
+        example: "The cat has 2 costumes so it can walk.",
+      },
+      mascotMessage: "Costume 1, costume 2, costume 1, costume 2... I'm walking! 🚶",
+      teacherNotes: {
+        questions: [
+          "How many costumes does the cat have?",
+          "Why does swapping pictures look like walking?",
+        ],
+        expectedAnswers: ["Two!", "Because the legs change!"],
+        tips: [
+          "Click costume1 then costume2 quickly, over and over. They will gasp.",
+          "This is exactly how cartoons are made — tell them that.",
+        ],
+        transition: "And the last room: Sounds.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 15,
+      title: "The Sounds Room",
+      emoji: "🔊",
+      type: "content",
+      content: [
+        "Every sprite can carry sounds.",
+        "The cat already has one, called 'Meow'.",
+        "Press the purple play button to hear it.",
+        "You can make it Faster, Slower, Louder — or a Robot!",
+      ],
+      image: "/images/scratch/sounds.webp",
+      mascotMessage: "MEOW! Now try the Robot button on me. 🤖",
+      teacherNotes: {
+        questions: [
+          "What sound does our cat have already?",
+          "Which button would make a scary monster voice?",
+        ],
+        expectedAnswers: ["Meow!", "Slower! Or Robot!"],
+        tips: [
+          "Play Meow, then Robot Meow, then Slower Meow. Guaranteed laughter.",
+          "Keep it to 90 seconds or they will play with sounds forever.",
+        ],
+        transition: "That is the WHOLE screen. Let's see if you remember it.",
+      },
+      bgVariant: "green",
+    },
+    {
+      id: 16,
+      title: "Match the Job",
+      emoji: "🃏",
+      type: "content",
+      content: ["Tap a card. What is this part's JOB?"],
+      flipCards: [
+        {
+          frontEmoji: "🎭",
+          frontText: "Stage",
+          backEmoji: "📺",
+          backText: "The TV screen where the game happens",
+        },
+        {
+          frontEmoji: "🧩",
+          frontText: "Palette",
+          backEmoji: "🧱",
+          backText: "The Lego box holding every block",
+        },
+        {
+          frontEmoji: "📋",
+          frontText: "Code Area",
+          backEmoji: "🔨",
+          backText: "The work table where we build scripts",
+        },
+        {
+          frontEmoji: "😺",
+          frontText: "Sprite",
+          backEmoji: "🎬",
+          backText: "A character we can program",
+        },
+        {
+          frontEmoji: "🏞️",
+          frontText: "Backdrop",
+          backEmoji: "🖼️",
+          backText: "The picture behind everything",
+        },
+        {
+          frontEmoji: "🏁",
+          frontText: "Green Flag",
+          backEmoji: "▶️",
+          backText: "The play button that starts the code",
+        },
+      ],
+      mascotMessage: "Guess first, THEN flip. No cheating! 😼",
+      teacherNotes: {
+        questions: ["Say the job before I flip it — ready?"],
+        expectedAnswers: ["(Students call out the answers)"],
+        tips: [
+          "Make them shout the answer before you flip. Much more effective.",
+          "Do a second round and time them.",
+        ],
+        transition: "Quiz time!",
+      },
+      bgVariant: "default",
+    },
+    {
+      id: 17,
+      title: "Quiz 1",
+      emoji: "❓",
+      type: "quiz",
+      content: ["Where does your game actually appear?"],
+      quiz: {
+        question: "Which part of Scratch shows your game to the player?",
+        options: [
+          "The Blocks Palette",
+          "The Code Area",
+          "The Stage",
+          "The Costumes tab",
+        ],
+        correctIndex: 2,
+      },
+      mascotMessage: "Think about the theatre! 🎭",
+      teacherNotes: {
+        questions: ["Why is it not the Code Area?"],
+        expectedAnswers: ["Because that is where we BUILD, not watch!"],
+        tips: ["Ask WHY the wrong answers are wrong. That is where learning happens."],
+        transition: "One more.",
+      },
+      bgVariant: "blue",
+    },
+    {
+      id: 18,
+      title: "Quiz 2",
+      emoji: "🧠",
+      type: "quiz",
+      content: ["A colour question!"],
+      quiz: {
+        question: "You want your sprite to MOVE. Which colour block do you need?",
+        options: ["Purple (Looks)", "Blue (Motion)", "Yellow (Events)", "Pink (Sound)"],
+        correctIndex: 1,
+      },
+      mascotMessage: "Blue is for moving. Always! 💙",
+      teacherNotes: {
+        questions: ["What would purple do instead?"],
+        expectedAnswers: ["Change how it looks!"],
+        tips: ["Reinforce the colour-to-job link — they will use it every session."],
+        transition: "Now, a race. Everyone to the computers!",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 19,
+      title: "Activity: Find It Race",
+      emoji: "🏃",
+      type: "activity",
+      content: [
+        "Computers open, Scratch open, hands ready!",
+        "I call out a part. You point at it FAST.",
+      ],
+      activitySteps: [
+        "Open scratch.mit.edu and click 'Create'.",
+        "Teacher calls: 'STAGE!' — everyone points at the stage.",
+        "Then: 'PALETTE!' … 'CODE AREA!' … 'GREEN FLAG!' … 'SPRITE PANE!'",
+        "Harder round: 'The Sounds tab!' … 'The backdrop panel!' … 'The Events category!'",
+        "Winner round: first to rename their sprite to their own name wins.",
+        "Last one: first to make the cat size 200 wins.",
+      ],
+      mascotMessage: "Fastest finger wins! Ready... GO! ⚡",
+      teacherNotes: {
+        questions: ["Ready? Where is the STAGE? Go!"],
+        expectedAnswers: ["(Students point at the correct area)"],
+        tips: [
+          "Stand behind them so you can see every screen at once.",
+          "Go slow for the first 3, then speed up.",
+          "If a child struggles, pair them with the faster one — do not single them out.",
+          "This is 10 minutes maximum. Keep the energy high.",
+        ],
+        transition: "Brilliant. Now let's actually WRITE something.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 20,
+      title: "Task: Your First Script",
+      emoji: "💻",
+      type: "activity",
+      content: [
+        "Build this exact script. Then press the Green Flag!",
+      ],
+      image: "/images/scratch/first-program.png",
+      activitySteps: [
+        "Click the yellow Events category.",
+        "Drag 'when 🟢 clicked' into the Code Area.",
+        "Click the blue Motion category. Drag 'move 10 steps' UNDER it until it clicks.",
+        "Click the purple Looks category. Drag 'say Hello! for 2 seconds' under that.",
+        "Press the Green Flag. Your cat walks and talks!",
+        "Now change 10 to 100. Press the flag again. What happened?",
+        "Change 'Hello!' to your own name. Press the flag.",
+      ],
+      mascotMessage: "This is it. You are officially a programmer now! 🎉",
+      teacherNotes: {
+        questions: [
+          "What happened when you changed 10 to 100?",
+          "What did YOUR cat say?",
+        ],
+        expectedAnswers: ["It walked much further!", "It said my name!"],
+        tips: [
+          "Snapping blocks is a physical skill — expect wobbles. Show the white snap-shadow.",
+          "If a block will not snap, they dropped it too far away. Just move it closer.",
+          "Everyone MUST finish this before the session ends. Help fast, do not lecture.",
+          "Make each child press the flag while you watch. That moment is the payoff.",
+        ],
+        transition: "Let's remember what we learned today.",
+      },
+      bgVariant: "green",
+    },
+    {
+      id: 21,
+      title: "Reflection",
+      emoji: "💡",
+      type: "review",
+      content: ["You learned the whole Scratch screen in one session. Wow!"],
+      reviewPoints: [
+        "🎭 The Stage — where the game is shown",
+        "🧩 The Palette — the box holding all the blocks",
+        "📋 The Code Area — where we snap blocks together",
+        "😺 Sprite — a character we can program",
+        "🏞️ Backdrop — the picture behind everything",
+        "🏁 Green Flag — the play button",
+        "🌈 Colour = job. Blue moves, purple shows, yellow starts.",
+        "Order matters: Scratch reads top to bottom.",
+      ],
+      mascotMessage: "You know my whole house now! See you next time. 💖",
+      teacherNotes: {
+        questions: [
+          "Which part was your favourite?",
+          "Which part was the most confusing?",
+        ],
+        expectedAnswers: ["The costumes one!", "The x and y numbers!"],
+        tips: [
+          "If they say x/y was confusing — perfect. That is exactly Session 6.",
+          "Celebrate loudly. They ran their first program today.",
+        ],
+        transition: "Homework, and it is a fun one.",
+      },
+      bgVariant: "blue",
+    },
+    {
+      id: 22,
       title: "Homework",
       emoji: "🏠",
       type: "homework",
       content: [
-        "Think of a story you want to create in Scratch next time.",
-        "Who is the main character (Sprite)?",
-        "Where are they (Stage/Backdrop)?"
+        "1. Draw your game on paper: your Sprite, and your Backdrop.",
+        "2. Label 4 parts on the drawing: Stage, Sprite, Backdrop, Code Area.",
+        "3. Open Scratch at home and make the cat say 3 different things.",
       ],
       image: "/images/s5-homework.png",
-      imagePrompt: "A child drawing a story on a piece of paper, colorful, cozy room, realistic photography",
-      mascotMessage: "Dream big! Next time we will make amazing stories! 🌠",
+      imagePrompt:
+        "A child drawing a story on a piece of paper, colorful, cozy room, realistic photography",
+      mascotMessage: "Bring your drawing next time. We will build it! 🌠",
       teacherNotes: {
-        questions: ["What is your favorite animal? Maybe they can be your sprite!"],
-        expectedAnswers: ["Dog, Dragon, Bird"],
-        tips: ["Encourage them to draw their character on paper at home."],
-        transition: "Great job today, see you next time!",
+        questions: ["What will your sprite be?", "Where will your game happen?"],
+        expectedAnswers: ["A dragon!", "In space!"],
+        tips: [
+          "Collect the drawings next session — you will reuse them right through to Session 20.",
+          "Part 3 is optional if they have no computer at home. Never make them feel behind.",
+        ],
+        transition: "Amazing work today. Next time: we make the cat move exactly where we want!",
       },
       bgVariant: "orange",
-    }
+    },
   ],
 };
