@@ -17,7 +17,7 @@ export interface SlideData {
   content: string[];
   image?: string;
   imagePrompt?: string;
-  type: "content" | "quiz" | "game" | "activity" | "review" | "homework" | "video";
+  type: "content" | "quiz" | "game" | "activity" | "review" | "homework" | "video" | "ui-tour";
   newWord?: {
     word: string;
     pronunciation: string;
@@ -56,6 +56,18 @@ export interface SlideData {
   reviewPoints?: string[];
   // Activity-specific fields
   activitySteps?: string[];
+  // Real-screenshot UI tour of the Scratch editor.
+  // `region` values are percentages (0-100) of the wide screenshot, used to
+  // draw the spotlight rectangle over the part being explained.
+  uiTour?: {
+    wideImage: string;
+    detailImage: string;
+    detailLabel: string;
+    region: { x: number; y: number; w: number; h: number };
+    facts: string[];
+    /** Render the detail crop tall (palettes) instead of wide. */
+    detailTall?: boolean;
+  };
   // Background color variant
   bgVariant?: "default" | "blue" | "purple" | "green" | "orange";
 }
