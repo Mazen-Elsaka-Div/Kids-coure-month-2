@@ -28,7 +28,7 @@ export default function Home() {
             href="/curriculum"
             className="inline-flex items-center gap-2 mt-8 font-outfit font-bold text-lg text-slate-50 bg-slate-900 hover:bg-slate-700 transition-colors rounded-full px-7 py-3.5"
           >
-            📋 See the full 20-session plan
+            📋 See the full 18-session plan
           </Link>
         </div>
 
