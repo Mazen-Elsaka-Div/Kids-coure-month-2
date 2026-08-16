@@ -120,19 +120,22 @@ export const session2: SessionData = {
       id: 4,
       title: "Find The Mistake! 🔍",
       emoji: "🔍",
-      type: "activity",
-      content: [
-        "We have an algorithm for Waking Up.",
-        "But there's a BIG mistake!",
-        "Can you find it?",
-        "1. Wake up 😴",
-        "2. Put on shoes 👟",
-        "3. Put on socks 🧦",
-        "4. Eat breakfast 🥞",
-      ],
-      image: "/images/s2-mistake.webp",
-      imagePrompt:
-        "A funny photo of a child wearing shoes on their feet and trying to put socks over the shoes, looking confused, bright bedroom, realistic photography, humorous tone",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "We have an algorithm for Waking Up in the morning. But one step is in the WRONG place!",
+        steps: [
+          "Wake up 😴",
+          "Put on shoes 👟",
+          "Put on socks 🧦",
+          "Eat breakfast 🥞",
+        ],
+        buggyIndex: 1,
+        whyItsWrong:
+          "Shoes went on BEFORE socks — imagine putting socks over your shoes! Socks must come first. Finding mistakes like this is called DEBUGGING.",
+        fixHint: "Look at your feet: what do you put on first, socks or shoes?",
+      },
       newWord: {
         word: "Mistake",
         pronunciation: "mis-TAKE",

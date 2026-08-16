@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SlideData } from "@/data/types";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
+import { addPoints } from "@/lib/progress";
 
 export function QuizSlide({ quiz }: { quiz: NonNullable<SlideData["quiz"]> }) {
   const [selected, setSelected] = useState<number | null>(null);
@@ -15,6 +16,7 @@ export function QuizSlide({ quiz }: { quiz: NonNullable<SlideData["quiz"]> }) {
     setIsCorrect(correct);
 
     if (correct) {
+      addPoints(10);
       confetti({
         particleCount: 100,
         spread: 70,

@@ -466,6 +466,44 @@ export const session4: SessionData = {
     },
     {
       id: 13,
+      title: "Bug Hunt: The Never-Ending Robot! ♾️",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A robot uses a LOOP to water 3 flowers in the garden. But something went wrong — the robot NEVER STOPPED and flooded the whole garden!",
+        steps: [
+          "Pick up the watering can 🪣",
+          "Fill it with water 💧",
+          "REPEAT FOREVER: water a flower 🌸",
+          "Put the watering can back",
+        ],
+        buggyIndex: 2,
+        whyItsWrong:
+          "REPEAT FOREVER never ends — that's an INFINITE LOOP! The robot needs 'REPEAT 3 TIMES' so the loop knows when to stop. Always tell your loop when to stop!",
+        fixHint: "Which step would make the robot never stop? Look for the word FOREVER!",
+      },
+      mascotMessage: "The garden turned into a swimming pool! One loop step is broken — find it! 🐰",
+      teacherNotes: {
+        questions: [
+          "Why did the robot never stop watering?",
+          "How do we fix an infinite loop?",
+        ],
+        expectedAnswers: [
+          "Because the loop says FOREVER — it never ends!",
+          "Give the loop a number, like Repeat 3 Times!",
+        ],
+        tips: [
+          "Mime endless watering until the kids yell STOP — then ask WHY the robot can't stop.",
+          "Connect back to the Infinite Loop slide: forever is a tool, but only when we WANT it.",
+        ],
+        transition: "Bug caught! Now let's reflect on what loops taught us today.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 14,
       title: "Reflection",
       emoji: "💡",
       type: "review",
@@ -493,7 +531,7 @@ export const session4: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 14,
+      id: 15,
       title: "Homework",
       emoji: "🏠",
       type: "homework",

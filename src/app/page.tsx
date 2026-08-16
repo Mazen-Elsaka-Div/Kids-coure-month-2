@@ -9,6 +9,7 @@ import { session7 } from "@/data/session7";
 import { session8 } from "@/data/session8";
 import { session9 } from "@/data/session9";
 import { session10 } from "@/data/session10";
+import { ProgressSummary } from "@/components/ProgressSummary";
 
 export default function Home() {
   const sessions = [session1, session2, session3, session4, session5, session6, session7, session8, session9, session10];
@@ -31,6 +32,8 @@ export default function Home() {
             📋 See the full 18-session plan
           </Link>
         </div>
+
+        <ProgressSummary />
 
         <div className="grid md:grid-cols-2 gap-8">
           {sessions.map((session) => (

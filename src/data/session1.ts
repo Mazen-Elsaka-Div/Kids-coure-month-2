@@ -488,6 +488,45 @@ export const session1: SessionData = {
     },
     {
       id: 13,
+      title: "Bug Hunt: The Toothbrush Robot! 🤖",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A robot got an algorithm for brushing teeth. But it did something SILLY! One step is in the wrong place.",
+        steps: [
+          "Pick up the toothbrush",
+          "Brush your teeth",
+          "Put toothpaste on the brush",
+          "Rinse your mouth with water",
+          "Put the toothbrush back",
+        ],
+        buggyIndex: 1,
+        whyItsWrong:
+          "The robot brushed with a DRY brush! 'Brush your teeth' must come AFTER putting toothpaste on. In an algorithm, the ORDER of steps matters!",
+        fixHint: "Would you brush your teeth before or after putting toothpaste on the brush?",
+      },
+      mascotMessage: "Eww, the robot brushed with no toothpaste! Can you find the step that's in the wrong place? 🐰",
+      teacherNotes: {
+        questions: [
+          "What silly thing did the robot do?",
+          "Why does the order of steps matter?",
+        ],
+        expectedAnswers: [
+          "It brushed its teeth before putting toothpaste on!",
+          "Because computers follow steps exactly in order!",
+        ],
+        tips: [
+          "Let students act out the wrong order — the laughter cements the lesson.",
+          "This is their first 'debugging' — name the word out loud when they find it.",
+        ],
+        transition: "You just fixed your first bug! Now let's review everything we learned.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 14,
       title: "What Did We Learn?",
       emoji: "💬",
       type: "review",
@@ -536,7 +575,7 @@ export const session1: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 14,
+      id: 15,
       title: "Homework Challenge! 📝",
       emoji: "📝",
       type: "homework",

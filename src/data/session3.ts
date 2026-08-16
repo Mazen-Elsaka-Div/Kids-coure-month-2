@@ -413,6 +413,44 @@ export const session3: SessionData = {
     },
     {
       id: 11,
+      title: "Bug Hunt: The Umbrella Robot! ☔",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A robot follows IF rules before going outside. But one rule is BACKWARDS and the robot got soaking wet!",
+        steps: [
+          "IF it is sunny → wear sunglasses 😎",
+          "IF it is raining → leave the umbrella at home ☔",
+          "IF it is cold → wear a jacket 🧥",
+          "IF shoes are untied → tie them 👟",
+        ],
+        buggyIndex: 1,
+        whyItsWrong:
+          "The rule is backwards! IF it is raining, you should TAKE the umbrella, not leave it! With IF rules, the action must match the condition.",
+        fixHint: "What do you do with an umbrella when it rains?",
+      },
+      mascotMessage: "The robot came home dripping wet! One IF rule is backwards — can you spot it? 🐰",
+      teacherNotes: {
+        questions: [
+          "Which rule made the robot wet?",
+          "How should the rule be written?",
+        ],
+        expectedAnswers: [
+          "The rain rule — it left the umbrella at home!",
+          "IF it is raining → TAKE the umbrella!",
+        ],
+        tips: [
+          "Have students say each rule out loud and act it — the wrong one gets a laugh.",
+          "Point out: the condition was fine, the ACTION was wrong. Both halves matter.",
+        ],
+        transition: "Great debugging! Now let's reflect on everything we learned about IF.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 12,
       title: "Reflection",
       emoji: "💡",
       type: "review",
@@ -440,7 +478,7 @@ export const session3: SessionData = {
       bgVariant: "orange",
     },
     {
-      id: 12,
+      id: 13,
       title: "Homework",
       emoji: "🏠",
       type: "homework",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { PointsHUD } from "./PointsHUD";
 
 export function Navigation({
   sessionId,
@@ -65,12 +66,15 @@ export function Navigation({
 
       {/* Navigation Controls */}
       <div className="fixed top-6 left-0 w-full px-8 z-40 pointer-events-none flex justify-between items-center">
-        <Link
-          href="/"
-          className="pointer-events-auto bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all font-outfit font-bold text-slate-700 hover:text-primary flex items-center gap-2 border border-slate-200"
-        >
-          <span>🏠</span> Home
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="pointer-events-auto bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all font-outfit font-bold text-slate-700 hover:text-primary flex items-center gap-2 border border-slate-200"
+          >
+            <span>🏠</span> Home
+          </Link>
+          <PointsHUD />
+        </div>
 
         <div className="pointer-events-auto flex items-center gap-4 bg-white/80 backdrop-blur-md px-2 py-2 rounded-full shadow-sm border border-slate-200">
           {prevSlideId ? (
