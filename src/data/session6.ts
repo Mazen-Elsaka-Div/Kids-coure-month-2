@@ -516,6 +516,63 @@ export const session6: SessionData = {
     },
     {
       id: 17,
+      title: "Video: X and Y Explained",
+      emoji: "🎬",
+      type: "video",
+      content: ["Let's watch a short video that shows X and Y in action one more time!"],
+      videoUrl: "https://www.youtube.com/embed/rI0kmhr1mO4",
+      mascotMessage: "Watch closely — X across, Y up! 📺",
+      teacherNotes: {
+        questions: ["What did the video say X does? And Y?"],
+        expectedAnswers: ["X moves across (left-right), Y moves up and down!"],
+        tips: [
+          "You don't need the whole video — 2-3 minutes is enough to reinforce the idea.",
+          "Pause the video and ask students to predict where the sprite will go.",
+        ],
+        transition: "Now let's catch one last bug before we review.",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 18,
+      title: "Bug Hunt: The Lost Cat!",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A student wants the cat to go UP to the top of the stage. But the cat slid to the RIGHT instead! One block is wrong.",
+        steps: [
+          "when green flag clicked 🏁",
+          "go to x: 0 y: 0 (center)",
+          "change x by 100 ➡️",
+          "say I'm at the top! 💬",
+        ],
+        buggyIndex: 2,
+        whyItsWrong:
+          "'Change x by 100' moves the cat ACROSS, not up! To go up, we need 'change y by 100'. Remember: X goes across, Y goes up!",
+        fixHint: "Say the magic sentence: X goes across, Y goes... ?",
+      },
+      mascotMessage: "I wanted to reach the top and ended up by the wall! Which block sent me the wrong way? 🐰",
+      teacherNotes: {
+        questions: [
+          "Which direction did 'change x by 100' send the cat?",
+          "Which block do we need instead?",
+        ],
+        expectedAnswers: [
+          "To the right — across the stage!",
+          "'Change y by 100' — Y goes up!",
+        ],
+        tips: [
+          "Have students trace the path with a finger on the coordinate grid image.",
+          "Mixing up X and Y is THE classic bug of this session — celebrate catching it.",
+        ],
+        transition: "Bug fixed! Now let's collect today's words.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 19,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -559,7 +616,7 @@ export const session6: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 18,
+      id: 20,
       title: "Homework: Escape Artist",
       emoji: "🏃",
       type: "homework",

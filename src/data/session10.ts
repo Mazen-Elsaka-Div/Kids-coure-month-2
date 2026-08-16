@@ -427,6 +427,63 @@ export const session10: SessionData = {
     },
     {
       id: 12,
+      title: "Video: IF THEN ELSE in Scratch",
+      emoji: "🎬",
+      type: "video",
+      content: ["Watch how IF THEN ELSE makes games smart!"],
+      videoUrl: "https://www.youtube.com/embed/xdwSrxeBvy0",
+      mascotMessage: "Every game rule you built today is an IF. See them in action! 📺",
+      teacherNotes: {
+        questions: ["Where did the video use an IF that we also used in our maze?"],
+        expectedAnswers: ["Checking if the sprite is touching something!"],
+        tips: [
+          "2-3 minutes is enough — the goal is recognizing IF patterns, not new content.",
+          "Ask: how many IF rules does YOUR maze have? Count them together.",
+        ],
+        transition: "One final bug is lurking in a maze script. Catch it!",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 13,
+      title: "Bug Hunt: The Ghost Walls!",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A student's maze has a problem: the walls only work at the START. After one second, the player walks straight THROUGH every wall like a ghost!",
+        steps: [
+          "when green flag clicked 🏁",
+          "if touching black? then move back 🧱 (checked only ONCE!)",
+          "forever: check arrow keys 🎮",
+          "if touching green? say You Win! 🏆",
+        ],
+        buggyIndex: 1,
+        whyItsWrong:
+          "The wall check runs only ONCE, at the start! It must live inside a FOREVER loop so it keeps checking the whole game. One check is not a rule — a rule never sleeps!",
+        fixHint: "How many times does the game need to check the walls — once, or always?",
+      },
+      mascotMessage: "I walked right through the wall like a ghost! Why did the wall stop working? 🐰",
+      teacherNotes: {
+        questions: [
+          "Why do the walls stop working after the start?",
+          "How do we make a rule that never sleeps?",
+        ],
+        expectedAnswers: [
+          "The IF ran only once — nobody is checking anymore!",
+          "Put the IF inside a forever loop!",
+        ],
+        tips: [
+          "This is the 'why does the wall check need forever?' flip card, now as a hands-on bug.",
+          "The phrase 'a rule never sleeps' sticks — use it every time someone forgets a forever.",
+        ],
+        transition: "Ghost walls fixed! Let's lock in today's words.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 14,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -482,7 +539,7 @@ export const session10: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 13,
+      id: 15,
       title: "Homework Mission",
       emoji: "🏠",
       type: "homework",

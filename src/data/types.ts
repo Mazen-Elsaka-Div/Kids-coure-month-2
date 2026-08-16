@@ -17,7 +17,7 @@ export interface SlideData {
   content: string[];
   image?: string;
   imagePrompt?: string;
-  type: "content" | "quiz" | "game" | "activity" | "review" | "homework" | "video" | "ui-tour";
+  type: "content" | "quiz" | "game" | "activity" | "review" | "homework" | "video" | "ui-tour" | "debug";
   newWord?: {
     word: string;
     pronunciation: string;
@@ -56,6 +56,14 @@ export interface SlideData {
   reviewPoints?: string[];
   // Activity-specific fields
   activitySteps?: string[];
+  // Debug-specific fields: kid clicks the buggy step to fix it
+  debug?: {
+    scenario: string;
+    steps: string[];
+    buggyIndex: number;
+    whyItsWrong: string;
+    fixHint?: string;
+  };
   // Real-screenshot UI tour of the Scratch editor.
   // `region` values are percentages (0-100) of the wide screenshot, used to
   // draw the spotlight rectangle over the part being explained.

@@ -419,6 +419,63 @@ export const session9: SessionData = {
     },
     {
       id: 11,
+      title: "Video: Sounds in Scratch",
+      emoji: "🎬",
+      type: "video",
+      content: ["The Scratch Team shows how to add, record, and use sounds!"],
+      videoUrl: "https://www.youtube.com/embed/7f9_vjl9yC8",
+      mascotMessage: "This one is from the people who MADE Scratch! 📺",
+      teacherNotes: {
+        questions: ["Did you see a sound trick in the video we didn't try today?"],
+        expectedAnswers: ["Recording your own voice! Text to speech!"],
+        tips: [
+          "Recording their own voice is a huge motivator — mention they can try it at home.",
+          "Keep it to 2-3 minutes; today already had a lot of screen time.",
+        ],
+        transition: "One last bug is hiding in a dance script. Find it!",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 12,
+      title: "Bug Hunt: The Frozen Party!",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A student's dancer plays music... but it FREEZES while the song plays, then does one dance move, then freezes again! The party looks broken.",
+        steps: [
+          "when green flag clicked 🏁",
+          "forever 🔁",
+          "play sound Dance Music until done ⏳",
+          "next costume 👕",
+        ],
+        buggyIndex: 2,
+        whyItsWrong:
+          "'Until done' makes the sprite WAIT for the whole song before moving! Inside a dance loop we need 'start sound' so the dancer keeps moving WHILE the music plays.",
+        fixHint: "One sound block waits, one doesn't. Which one lets the dancer keep dancing?",
+      },
+      mascotMessage: "My dancer stands still through the whole song, then hops ONCE! Which block froze the party? 🐰",
+      teacherNotes: {
+        questions: [
+          "Why does the dancer freeze?",
+          "When WOULD 'until done' be the right choice?",
+        ],
+        expectedAnswers: [
+          "'Until done' makes it wait for the whole song before the next block!",
+          "For background music that should loop fully — like in the Dance Party backdrop!",
+        ],
+        tips: [
+          "This is the exact start-vs-until-done trap from today's key question — now in bug form.",
+          "If time allows, demo both versions live. Seeing the freeze is unforgettable.",
+        ],
+        transition: "Party saved! Let's lock in today's words.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 13,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -474,7 +531,7 @@ export const session9: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 12,
+      id: 14,
       title: "Homework Mission",
       emoji: "🏠",
       type: "homework",

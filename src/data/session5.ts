@@ -730,6 +730,44 @@ export const session5: SessionData = {
     },
     {
       id: 22,
+      title: "Bug Hunt: The Broken Script! 🐱",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A student built a Scratch script to make the cat move and say hello. But when they press the green flag... NOTHING happens!",
+        steps: [
+          "when green flag clicked (yellow block) 🏁",
+          "hide (purple block) 🙈",
+          "move 10 steps (blue block) 🚶",
+          "say Hello! (purple block) 💬",
+        ],
+        buggyIndex: 1,
+        whyItsWrong:
+          "The cat HIDES first, so nobody can see it move or talk! The 'hide' block should not be there. Scratch reads blocks top to bottom — one wrong block breaks the show!",
+        fixHint: "The script runs fine... but WHERE is the cat? Which block makes it invisible?",
+      },
+      mascotMessage: "I pressed the flag and the cat vanished! One block ruins everything — find it! 🐰",
+      teacherNotes: {
+        questions: [
+          "Why can't we see the cat move?",
+          "Which palette colour did the buggy block come from?",
+        ],
+        expectedAnswers: [
+          "Because it hides first — it IS moving, we just can't see it!",
+          "Purple — the Looks palette!",
+        ],
+        tips: [
+          "This is the same 'forget show' bug from the Hide & Seek game — connect the two.",
+          "Point out the script DID run. Invisible bugs are the sneakiest kind!",
+        ],
+        transition: "Bug squashed! Now let's review the whole Scratch house.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 23,
       title: "Reflection",
       emoji: "💡",
       type: "review",
@@ -760,7 +798,7 @@ export const session5: SessionData = {
       bgVariant: "blue",
     },
     {
-      id: 22,
+      id: 24,
       title: "Homework",
       emoji: "🏠",
       type: "homework",

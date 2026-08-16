@@ -544,6 +544,63 @@ export const session7: SessionData = {
     },
     {
       id: 17,
+      title: "Video: Costumes in Action",
+      emoji: "🎬",
+      type: "video",
+      content: ["Let's watch how costumes bring a sprite to life!"],
+      videoUrl: "https://www.youtube.com/embed/4ogkMy59aBI",
+      mascotMessage: "Watch how fast picture-swapping tricks your eyes! 📺",
+      teacherNotes: {
+        questions: ["How did the video make the sprite look alive?"],
+        expectedAnswers: ["By switching costumes quickly — like a flipbook!"],
+        tips: [
+          "2-3 minutes of the video is enough — stop once the costume-switch idea lands.",
+          "Ask students to blink fast while looking at a walking classmate — same flipbook idea!",
+        ],
+        transition: "One last bug is hiding in an animation script. Let's catch it.",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 18,
+      title: "Bug Hunt: The Frozen Dancer!",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A student made a dancing animation. But the sprite switches costumes SO fast that it looks frozen! One step is missing something important.",
+        steps: [
+          "when green flag clicked 🏁",
+          "forever 🔁",
+          "next costume 👕",
+          "(nothing else in the loop!) ⬅️",
+        ],
+        buggyIndex: 3,
+        whyItsWrong:
+          "There's no WAIT block! The computer swaps costumes millions of times a second — way too fast for human eyes. Add 'wait 0.2 seconds' inside the loop so we can SEE the dance.",
+        fixHint: "Computers are fast. Human eyes are slow. What block slows the loop down?",
+      },
+      mascotMessage: "My dance looks like I'm standing still! What's missing from the loop? 🐰",
+      teacherNotes: {
+        questions: [
+          "Why does the animation look frozen?",
+          "Which block fixes it, and where does it go?",
+        ],
+        expectedAnswers: [
+          "The loop runs too fast — our eyes can't see the switches!",
+          "'Wait 0.2 seconds' — INSIDE the forever loop!",
+        ],
+        tips: [
+          "This is the exact bug from the wait-block slide earlier — let them discover the connection.",
+          "Demo live if possible: remove the wait, watch it 'freeze', add it back.",
+        ],
+        transition: "Bug caught! Time to collect today's words.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 19,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -593,7 +650,7 @@ export const session7: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 18,
+      id: 20,
       title: "Homework Mission",
       emoji: "🏠",
       type: "homework",

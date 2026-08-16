@@ -9,6 +9,9 @@ import { VideoEmbed } from "./VideoEmbed";
 import { VisualBlocksContainer } from "./VisualBlocks";
 import { FlipCardsContainer } from "./FlipCards";
 import { UiTour } from "./UiTour";
+import { DebugSlide } from "./DebugSlide";
+import { BadgeUnlock } from "./BadgeUnlock";
+import { getBadgeForSession } from "@/data/badges";
 
 function CodePanel({ lines }: { lines: string[] }) {
   return (
@@ -33,7 +36,15 @@ function CodePanel({ lines }: { lines: string[] }) {
   );
 }
 
-export function SlideLayout({ slide }: { slide: SlideData }) {
+export function SlideLayout({
+  slide,
+  sessionId,
+  showBadge,
+}: {
+  slide: SlideData;
+  sessionId?: number;
+  showBadge?: boolean;
+}) {
   // Background variants
   const bgClasses = {
     default: "bg-slate-50",
@@ -87,12 +98,20 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
           <QuizSlide quiz={slide.quiz} />
         )}
 
+        {slide.type === "debug" && slide.debug && (
+          <DebugSlide debug={slide.debug} />
+        )}
+
         {slide.type === "game" && slide.gameUrl && (
           <GameEmbed url={slide.gameUrl} />
         )}
 
         {slide.type === "video" && slide.videoUrl && (
           <VideoEmbed url={slide.videoUrl} />
+        )}
+
+        {slide.type === "review" && showBadge && sessionId !== undefined && getBadgeForSession(sessionId) && (
+          <BadgeUnlock sessionId={sessionId} badge={getBadgeForSession(sessionId)!} />
         )}
 
         {slide.type === "review" && slide.reviewPoints && (

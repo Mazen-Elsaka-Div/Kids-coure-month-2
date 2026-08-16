@@ -55,6 +55,11 @@ export default async function SessionPage(props: {
     notFound();
   }
 
+  // The badge celebration belongs only on the FINAL review slide of the
+  // session (some sessions also open with a "Do You Remember?" review).
+  const lastReviewSlide = [...session.slides].reverse().find((s) => s.type === "review");
+  const showBadge = currentSlide.type === "review" && lastReviewSlide?.id === currentSlide.id;
+
   // Calculate prev/next
   const totalSlides = session.slides.length;
   const prevSlideId = currentSlideId > 1 ? currentSlideId - 1 : null;
@@ -71,7 +76,7 @@ export default async function SessionPage(props: {
       />
       
       <main className="overflow-hidden relative min-h-screen">
-        <SlideLayout slide={currentSlide} />
+        <SlideLayout slide={currentSlide} sessionId={session.id} showBadge={showBadge} />
       </main>
 
       {currentSlide.teacherNotes && (
