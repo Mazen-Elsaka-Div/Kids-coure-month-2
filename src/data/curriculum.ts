@@ -237,7 +237,7 @@ export const curriculum: CurriculumSession[] = [
     homework: "Add a 4th dancer to your party with a move nobody else has.",
     carriesConcept: "Events",
     isProject: true,
-    status: "planned",
+    status: "done",
   },
 
   // ---------- Real Programming ----------
@@ -258,7 +258,7 @@ export const curriculum: CurriculumSession[] = [
     task: "Make a sprite walk to the right edge using repeat until, not repeat 10.",
     homework: "Use a nested loop to make any repeating pattern you like.",
     carriesConcept: "Repeat Until · Nested loops",
-    status: "planned",
+    status: "done",
   },
   {
     id: 10,
