@@ -432,6 +432,46 @@ export const session2: SessionData = {
     },
     {
       id: 13,
+      title: "Mini Game: Level Designer 🎮",
+      emoji: "🎮",
+      type: "activity",
+      content: [
+        "Today you are not a player. You are the person who DESIGNS the game.",
+        "Every game you love was broken into small steps by somebody first.",
+        "Your game: a cat has to cross a road full of cars and reach a fish.",
+      ],
+      activitySteps: [
+        "On paper, draw the game: where the cat starts, the road, the cars, the fish.",
+        "Now BREAK IT DOWN — write the small steps the cat must do, in order.",
+        "Find one step that happens again and again. Write REPEAT next to it. 🔁",
+        "Find one moment where something could go wrong. Write IF next to it. ❓",
+        "Read your design out loud to your partner. Can they play it exactly as written?",
+        "Fix the one step your partner got confused by.",
+      ],
+      mascotMessage: "You just designed a game before writing a single line of code! 🐰",
+      teacherNotes: {
+        questions: [
+          "Which step in your game repeats?",
+          "What is the IF in your game?",
+          "Why do designers plan on paper before touching a computer?",
+        ],
+        expectedAnswers: [
+          "The cars moving! The cat stepping forward!",
+          "IF the car touches the cat, the cat loses!",
+          "Because it is easier to fix paper than to fix code!",
+        ],
+        tips: [
+          "This is the same maze/road game they will actually BUILD in Session 10. Say that out loud — it makes today feel important.",
+          "Don't correct their drawing. Correct only the steps that a robot could not follow.",
+          "If they write 'the cat wins' with no condition, ask 'HOW does the game know?' That question is the whole point.",
+          "Keep it to 10-12 minutes. Paper only — no computers open.",
+        ],
+        transition: "Keep that paper safe. We will build this game for real later!",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 14,
       title: "Today's Review 🏆",
       emoji: "🏆",
       type: "review",
@@ -474,7 +514,7 @@ export const session2: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 14,
+      id: 15,
       title: "Homework Challenge! 📝",
       emoji: "📝",
       type: "homework",

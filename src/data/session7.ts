@@ -508,6 +508,42 @@ export const session7: SessionData = {
     },
     {
       id: 16,
+      title: "Mini Game: Costume Chase 🎭",
+      emoji: "🎭",
+      type: "activity",
+      content: [
+        "Build a tiny chase game with one sprite and two costumes.",
+        "The player clicks the sprite to make it change costume and jump to a new spot.",
+        "The goal is not speed — it is making the sprite look alive and react every time.",
+      ],
+      activitySteps: [
+        "Choose a sprite with at least two costumes and delete any extra costumes you do not need.",
+        "Add: when this sprite clicked → next costume.",
+        "Under it, add: go to random position. Test the chase.",
+        "Create a second script: when green flag clicked → switch costume to costume 1.",
+        "Add a score-free win rule: catch the sprite five times, then say 'You caught me!'.",
+        "Bonus: add a short wait after the costume change so you can see the animation.",
+      ],
+      mascotMessage: "Every click is a new costume and a new escape route!",
+      teacherNotes: {
+        questions: [
+          "Why does the green flag script switch to costume 1?",
+          "What is the difference between next costume and switch costume to?",
+        ],
+        expectedAnswers: [
+          "So every new game starts in the same place.",
+          "next moves forward; switch chooses a specific costume.",
+        ],
+        tips: [
+          "Let students test with the flag after catching the sprite; a reset is a core game habit.",
+          "If random position is too hard, use glide to a fixed position first and keep the focus on costumes.",
+        ],
+        transition: "You made a sprite react. Next time, your code will start itself.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 17,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -557,7 +593,7 @@ export const session7: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 17,
+      id: 18,
       title: "Homework Mission",
       emoji: "🏠",
       type: "homework",

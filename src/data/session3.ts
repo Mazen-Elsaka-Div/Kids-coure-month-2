@@ -373,6 +373,46 @@ export const session3: SessionData = {
     },
     {
       id: 10,
+      title: "Mini Game: Red Light, Green Light 🚦",
+      emoji: "🚦",
+      type: "activity",
+      content: [
+        "A real game, played standing up, that is nothing but one big IF.",
+        "IF the light is green → walk. IF the light is red → freeze.",
+        "The first person to touch the wall wins. But a wrong move sends you back.",
+      ],
+      activitySteps: [
+        "Students stand at one end of the room. The teacher holds a green card and a red card.",
+        "Green card up → students walk forward. Red card up → students FREEZE instantly.",
+        "Anyone who moves on red goes back to the start line.",
+        "Play until someone touches the far wall.",
+        "Now say the rule out loud together as code: IF green THEN walk, ELSE freeze.",
+        "Round 2 with a new rule the students invent — one green rule, one red rule.",
+      ],
+      mascotMessage: "One card, two answers. That is an IF with an ELSE! 🚦",
+      teacherNotes: {
+        questions: [
+          "How many answers did the game have?",
+          "What is the condition in this game?",
+          "What would happen if there was no red card at all?",
+        ],
+        expectedAnswers: [
+          "Two! Walk or freeze!",
+          "Whether the card is green!",
+          "Everyone just walks — there is no game!",
+        ],
+        tips: [
+          "Play it fast and switch cards unpredictably. The fun IS the learning here.",
+          "The key sentence to draw out: two answers means IF-ELSE. Write it on the board in their own words.",
+          "The 'no red card' question is important — no condition means no decision. Let them reach it.",
+          "Round 2 with their own rule proves they understood the shape, not just the game.",
+        ],
+        transition: "You just played a condition. Now let's put words to it.",
+      },
+      bgVariant: "green",
+    },
+    {
+      id: 11,
       title: "Reflection",
       emoji: "💡",
       type: "review",
@@ -400,7 +440,7 @@ export const session3: SessionData = {
       bgVariant: "orange",
     },
     {
-      id: 11,
+      id: 12,
       title: "Homework",
       emoji: "🏠",
       type: "homework",

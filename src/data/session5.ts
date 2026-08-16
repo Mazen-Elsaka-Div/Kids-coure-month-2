@@ -689,6 +689,47 @@ export const session5: SessionData = {
     },
     {
       id: 21,
+      title: "Mini Game: Hide & Seek Cat 🙈",
+      emoji: "🙈",
+      type: "activity",
+      content: [
+        "Your first tiny Scratch game — and it only needs blocks you already met today.",
+        "Click the cat and it vanishes. Press the flag and it comes back.",
+        "That is a real game loop: a thing you do, and a way to reset it.",
+      ],
+      activitySteps: [
+        "Pick any sprite you like from the sprite library.",
+        "From the yellow Events palette, drag out: when this sprite clicked.",
+        "From the purple Looks palette, snap under it: hide.",
+        "Now start a SECOND stack: when green flag clicked → show.",
+        "Press the green flag, then click your sprite. It disappears!",
+        "Press the flag again to bring it back. You just built a two-script game.",
+        "Bonus: add 'go to random position' under show so it hides somewhere new each time.",
+      ],
+      mascotMessage: "Two little stacks and I'm already playing hide and seek! 🙈",
+      teacherNotes: {
+        questions: [
+          "Why do we need TWO separate stacks?",
+          "What happens if you forget the 'show' stack?",
+          "Which colour did the starting blocks come from?",
+        ],
+        expectedAnswers: [
+          "One to hide, one to bring it back!",
+          "The cat is gone forever and the game is broken!",
+          "Yellow — Events!",
+        ],
+        tips: [
+          "This is their first taste of two scripts on one sprite — the exact idea Session 8 opens with. Plant it now, name it later.",
+          "The 'forget show' bug is worth letting them hit on purpose. Ask them to fix it themselves.",
+          "Nobody should be typing anything. Pure drag and snap — that is the win for today.",
+          "10 minutes. If a student flies through it, let them add the random position bonus.",
+        ],
+        transition: "You built a game on your first day in Scratch. Let's review the house.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 22,
       title: "Reflection",
       emoji: "💡",
       type: "review",

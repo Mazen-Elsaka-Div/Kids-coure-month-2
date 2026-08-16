@@ -450,6 +450,44 @@ export const session1: SessionData = {
     },
     {
       id: 12,
+      title: "Mini Game: Treasure Hunter 🗺️",
+      emoji: "🗺️",
+      type: "activity",
+      content: [
+        "A tiny game, played on paper, with no computer at all.",
+        "I hide a treasure somewhere in this room. You write the algorithm that gets me to it.",
+        "But here is the catch: I will follow your steps EXACTLY. Nothing else.",
+      ],
+      activitySteps: [
+        "One student hides a small object while the other closes their eyes.",
+        "The hider writes an algorithm of exactly 5 steps to reach it (example: 'walk 3 steps forward').",
+        "Rules for steps: only 'walk N steps', 'turn left', 'turn right', 'pick up'.",
+        "The teacher becomes the robot and follows the 5 steps EXACTLY — no guessing, no kindness.",
+        "Did the robot reach the treasure? If not, find the broken step and fix ONLY that step.",
+        "Swap roles and play again. Second round must be done in 4 steps.",
+      ],
+      mascotMessage: "5 steps, no cheating, and I don't guess. Good luck! 🐰",
+      teacherNotes: {
+        questions: [
+          "Which step broke the game?",
+          "Why couldn't I just walk to the treasure myself?",
+        ],
+        expectedAnswers: [
+          "The one with the wrong number of steps / the wrong turn!",
+          "Because a robot doesn't think — it only follows!",
+        ],
+        tips: [
+          "Be a ruthlessly literal robot. If they write 'walk', walk ONE step and stop. The laughter is the lesson.",
+          "Do NOT let them repair the whole algorithm. One step only — this is their first taste of debugging.",
+          "The 4-step second round forces them to combine steps. That is decomposition, arriving early.",
+          "Keep the whole game under 10 minutes. It is a warm-up for the review, not a main course.",
+        ],
+        transition: "That was a game AND an algorithm. Now let's name what we learned.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 13,
       title: "What Did We Learn?",
       emoji: "💬",
       type: "review",
@@ -498,7 +536,7 @@ export const session1: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 13,
+      id: 14,
       title: "Homework Challenge! 📝",
       emoji: "📝",
       type: "homework",

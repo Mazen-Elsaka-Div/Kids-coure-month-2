@@ -199,14 +199,14 @@ export const session6: SessionData = {
       emoji: "🔄",
       type: "content",
       content: [
-        "'turn ↻ 15 degrees' spins the sprite clockwise.",
-        "'turn ↺ 15 degrees' spins it the other way.",
+        "'turn right 15 degrees' spins the sprite clockwise.",
+        "'turn left 15 degrees' spins it the other way.",
         "A full spin all the way around is 360 degrees.",
         "A perfect corner — like the corner of a square — is 90 degrees.",
       ],
       visualBlocks: [
-        { type: "action", color: "blue", label: "turn ↻ 15 degrees" },
-        { type: "action", color: "blue", label: "turn ↺ 15 degrees" },
+        { type: "action", color: "blue", label: "turn right 15 degrees" },
+        { type: "action", color: "blue", label: "turn left 15 degrees" },
       ],
       newWord: {
         word: "Degrees",
@@ -428,7 +428,7 @@ export const session6: SessionData = {
           "glide 1 secs to x: y:",
           "move 10 steps",
           "go to x: y:",
-          "turn ↻ 15 degrees",
+          "turn right 15 degrees",
         ],
         correctIndex: 2,
       },
@@ -455,7 +455,7 @@ export const session6: SessionData = {
       activitySteps: [
         "Start with: when flag clicked → go to x: 0 y: 0 → point in direction 90.",
         "Add: move 100 steps.",
-        "Add: turn ↻ 90 degrees. (Careful — the block says 15. Change it!)",
+        "Add: turn right 90 degrees. (Careful — the block says 15. Change it!)",
         "Repeat that pair until you have FOUR moves and FOUR turns.",
         "Run it. Did the cat end exactly where it started?",
         "Check the x and y numbers under the stage — are they 0 and 0 again?",
@@ -482,6 +482,40 @@ export const session6: SessionData = {
     },
     {
       id: 16,
+      title: "Mini Game: Catch the Coordinate 📍",
+      emoji: "📍",
+      type: "activity",
+      content: [
+        "Use the stage like a treasure map. Your sprite must reach three coordinates in order.",
+        "Each coordinate is a checkpoint. Move, turn, and glide — but your partner chooses the route.",
+      ],
+      activitySteps: [
+        "Put a sprite at x: 0 y: 0 and ask your partner to call out a target coordinate.",
+        "Move the sprite there using go to, then say the coordinate out loud.",
+        "Return home and reach the same target using glide instead. Notice the difference.",
+        "Add a second target. Use point in direction before moving so the sprite faces the route.",
+        "Bonus: hide a 'treasure' sprite at the target and win when your sprite reaches it.",
+      ],
+      mascotMessage: "Coordinates are addresses. Can you find the treasure?",
+      teacherNotes: {
+        questions: [
+          "What does x change? What does y change?",
+          "Why did glide look different from go to?",
+        ],
+        expectedAnswers: [
+          "x moves left and right; y moves up and down.",
+          "go to teleports; glide travels over time.",
+        ],
+        tips: [
+          "Have partners call coordinates from opposite quadrants so they practise negative numbers too.",
+          "The treasure bonus is optional; keep the core task about reading the stage and choosing a route.",
+        ],
+        transition: "Every game needs a map. Now let us name the map words.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 17,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -525,7 +559,7 @@ export const session6: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 17,
+      id: 18,
       title: "Homework: Escape Artist",
       emoji: "🏃",
       type: "homework",
