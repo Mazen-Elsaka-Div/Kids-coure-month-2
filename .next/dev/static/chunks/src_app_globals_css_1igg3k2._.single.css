@@ -35,6 +35,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
@@ -821,6 +822,10 @@
 
   .flex-1 {
     flex: 1;
+  }
+
+  .shrink {
+    flex-shrink: 1;
   }
 
   .shrink-0 {
@@ -1708,6 +1713,11 @@
     }
   }
 
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+
   .drop-shadow-md {
     --tw-drop-shadow-size: drop-shadow(0 3px 3px var(--tw-drop-shadow-color, #0000001f));
     --tw-drop-shadow: drop-shadow(var(--drop-shadow-md));
@@ -2236,6 +2246,12 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
+}
+
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 
 @property --tw-blur {

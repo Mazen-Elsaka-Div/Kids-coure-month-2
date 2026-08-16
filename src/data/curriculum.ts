@@ -1,9 +1,13 @@
 /**
  * The full course roadmap for two 9-year-old students.
- * 20 sessions total. 90 minutes each. 2 sessions per week = 10 weeks.
+ * 18 sessions total. 90 minutes each. 2 sessions per week = 9 weeks.
  *
  * Sessions 1-4  : algorithm foundations (already built)
- * Sessions 5-20 : Scratch, 16 sessions
+ * Sessions 5-18 : Scratch, 14 sessions
+ *
+ * Sessions 8-10 are deliberately dense: events and all three loop types land
+ * together in 8, sound plus the first full project in 9, and 10 is pure
+ * building — a playable maze that teaches conditions by needing them.
  *
  * The algorithm concepts that were missing from sessions 1-4 (variables,
  * events, AND/OR/NOT, repeat-until, flowcharts, x/y coordinates) are taught
@@ -44,32 +48,32 @@ export const stages = [
   },
   {
     name: "First Steps in Scratch",
-    range: "Sessions 5-8",
+    range: "Sessions 5-7",
     weeks: "Weeks 3-4",
     summary:
-      "The editor, moving a sprite, animating it, and making it start on its own. Ends in their first finished project.",
+      "The editor, moving a sprite around the grid, and animating it until it looks alive.",
     color: "#F59E0B",
   },
   {
     name: "Real Programming",
-    range: "Sessions 9-14",
-    weeks: "Weeks 5-7",
+    range: "Sessions 8-12",
+    weeks: "Weeks 4-6",
     summary:
-      "Loops, sound, conditionals, variables and randomness. This is where the foundations become code.",
+      "Events, loops, sound, conditions, variables and randomness — plus three real projects, including their first playable game.",
     color: "#10B981",
   },
   {
     name: "Building Big",
-    range: "Sessions 15-18",
-    weeks: "Weeks 8-9",
+    range: "Sessions 13-16",
+    weeks: "Weeks 7-8",
     summary:
       "Many sprites talking to each other, clones, lists and their own custom blocks.",
     color: "#3B82F6",
   },
   {
     name: "Mastery",
-    range: "Sessions 19-20",
-    weeks: "Week 10",
+    range: "Sessions 17-18",
+    weeks: "Week 9",
     summary:
       "Gravity and jumping, then a game of their own design, presented to an audience.",
     color: "#EC4899",
@@ -214,120 +218,93 @@ export const curriculum: CurriculumSession[] = [
     homework: "Animate any sprite so it looks like it is really walking.",
     status: "done",
   },
+  // ---------- Real Programming ----------
   {
     id: 8,
     week: 4,
-    title: "Events + Project 1: Dance Party",
-    goal: "Make code start by itself, and finish a complete little project.",
+    title: "Events + Loops",
+    goal: "Make code start by itself, and repeat itself three different ways.",
     newBlocks: [
       "when green flag clicked",
       "when space key pressed",
       "when this sprite clicked",
-      "when backdrop switches to",
+      "repeat 10",
+      "forever",
+      "repeat until",
+      "wait 1 seconds",
     ],
     explain: [
       "An EVENT is 'when X happens, do Y'. It is an IF that waits.",
       "Yellow hat blocks sit on top. Without one, nothing starts by itself.",
-      "Different keys can start different scripts on the same sprite.",
+      "One sprite can hold several scripts, each with its own hat.",
+      "repeat 10 counts. forever never ends. repeat until watches for a question to become true.",
+      "A loop inside a loop is nested — the inside one finishes first, every single time.",
     ],
     activity:
-      "Give three sprites different dance moves, each starting on the green flag.",
+      "Draw a square with repeat 4, then nest it inside repeat 8 to get a flower.",
     task:
-      "PROJECT 1 — Dance Party: 3 sprites, a backdrop, all dancing when the flag is clicked, and one that reacts when clicked.",
-    homework: "Add a 4th dancer to your party with a move nobody else has.",
-    carriesConcept: "Events",
-    isProject: true,
+      "MINI GAME — Traffic Light: a sprite that changes colour forever on the flag, and stops when you press a key.",
+    homework: "Use a nested loop to make any repeating pattern you like.",
+    carriesConcept: "Events · Repeat Until · Nested loops",
     status: "done",
   },
-
-  // ---------- Real Programming ----------
   {
     id: 9,
     week: 5,
-    title: "Loops for Real",
-    goal: "Use all three loop types, and nest one inside another.",
-    newBlocks: ["repeat 10", "forever", "repeat until", "wait 1 seconds"],
-    explain: [
-      "repeat 10 — you know the number. forever — never ends.",
-      "repeat until — keeps going until a question becomes true.",
-      "A loop inside a loop is a nested loop. The inside one finishes first.",
-      "'wait' is what makes a loop watchable instead of instant.",
-    ],
-    activity:
-      "Draw a square with repeat 4, then a flower by nesting that inside repeat 8.",
-    task: "Make a sprite walk to the right edge using repeat until, not repeat 10.",
-    homework: "Use a nested loop to make any repeating pattern you like.",
-    carriesConcept: "Repeat Until · Nested loops",
-    status: "done",
-  },
-  {
-    id: 10,
-    week: 5,
-    title: "Sound & Music",
-    goal: "Add sound to a project and control when it plays.",
+    title: "Sound & Music + Project 1: Dance Party",
+    goal: "Add sound to a project, then finish a complete one.",
     newBlocks: [
       "play sound Meow until done",
       "start sound Meow",
       "change volume by",
       "play note 60 for 0.5 beats",
       "set tempo to",
+      "when backdrop switches to",
     ],
     explain: [
       "'until done' waits for the sound to finish. 'start sound' does not wait.",
-      "That difference changes everything about timing.",
-      "The Music extension turns your sprite into an instrument.",
+      "That one difference decides whether your dancers move in time or freeze.",
+      "The Music extension turns a sprite into an instrument.",
+      "A project is finished when somebody else can press the flag and enjoy it.",
     ],
     activity: "Build a 4-key piano: 4 sprites, each plays a note when clicked.",
-    task: "Program a short song using play note inside a loop.",
-    homework: "Add sound to your Dance Party so the music matches the moves.",
-    status: "planned",
+    task:
+      "PROJECT 1 — Dance Party: 3 sprites dancing on the flag, music playing in a loop, and one sprite that reacts when clicked.",
+    homework: "Add a 4th dancer with a move — and a sound — nobody else has.",
+    carriesConcept: "Sound timing",
+    isProject: true,
+    status: "done",
+  },
+  {
+    id: 10,
+    week: 5,
+    title: "Practical: Maze Game",
+    goal: "Build a real game somebody can play, and meet conditions by needing them.",
+    newBlocks: [
+      "if <> then",
+      "touching color ?",
+      "key right arrow pressed ?",
+      "wait until <>",
+      "go to x: 0 y: 0",
+    ],
+    explain: [
+      "The blue Sensing blocks are the sprite's eyes — 'touching color' is a yes/no question.",
+      "A condition block is a pointed hexagon. It only fits in a hexagon hole.",
+      "Session 3's IF is now a real block: if touching the wall, then go back.",
+      "Plan on paper first — a diamond in your flowchart is always a question.",
+    ],
+    activity:
+      "Paint the maze walls in one solid colour together, then code arrow-key movement.",
+    task:
+      "PROJECT 2 — Maze Game: your own maze, arrow keys, walls that send you back, and a win message at the goal.",
+    homework: "Add a second, harder maze level that loads after you win the first.",
+    carriesConcept: "Conditions in code · Flowcharts",
+    isProject: true,
+    status: "done",
   },
   {
     id: 11,
     week: 6,
-    title: "Conditions in Code",
-    goal: "Turn the Session 3 IF into real Scratch blocks that sense the world.",
-    newBlocks: [
-      "if <> then",
-      "if <> then else",
-      "touching color ?",
-      "touching mouse-pointer ?",
-      "key space pressed ?",
-      "wait until <>",
-    ],
-    explain: [
-      "The blue Sensing blocks are the sprite's eyes and ears.",
-      "A condition block is a pointed hexagon — it only fits in a hexagon hole.",
-      "Before coding, draw the plan as a flowchart: diamond = a question.",
-    ],
-    activity:
-      "Draw a flowchart for a maze game on paper together, then code the wall detection.",
-    task: "Make a sprite say 'Ouch!' and jump back whenever it touches red.",
-    homework: "Draw the flowchart for a game idea of your own.",
-    carriesConcept: "Flowcharts",
-    status: "planned",
-  },
-  {
-    id: 12,
-    week: 6,
-    title: "Project 2: Maze Game",
-    goal: "Combine events, loops and conditions into a game somebody can play.",
-    newBlocks: [],
-    explain: [
-      "Arrow keys move the player — that is 4 events.",
-      "Touching the wall colour sends you back to the start.",
-      "Touching the goal wins the game.",
-    ],
-    activity: "Build the maze walls in the paint editor and code the player together.",
-    task:
-      "PROJECT 2 — Maze Game: your own maze, arrow-key movement, walls that block, and a win message.",
-    homework: "Add a second level to your maze that appears after you win the first.",
-    isProject: true,
-    status: "planned",
-  },
-  {
-    id: 13,
-    week: 7,
     title: "Variables & Score",
     goal: "Store a number that changes, and ask the player for information.",
     newBlocks: [
@@ -350,8 +327,8 @@ export const curriculum: CurriculumSession[] = [
     status: "planned",
   },
   {
-    id: 14,
-    week: 7,
+    id: 12,
+    week: 6,
     title: "Operators & Luck",
     goal: "Do maths, combine conditions, and make things unpredictable.",
     newBlocks: [
@@ -378,8 +355,8 @@ export const curriculum: CurriculumSession[] = [
 
   // ---------- Building Big ----------
   {
-    id: 15,
-    week: 8,
+    id: 13,
+    week: 7,
     title: "Sprites That Talk to Each Other",
     goal: "Coordinate several sprites using broadcast messages.",
     newBlocks: [
@@ -400,8 +377,8 @@ export const curriculum: CurriculumSession[] = [
     status: "planned",
   },
   {
-    id: 16,
-    week: 8,
+    id: 14,
+    week: 7,
     title: "Clones",
     goal: "Make many copies of one sprite without copying the code.",
     newBlocks: [
@@ -420,8 +397,8 @@ export const curriculum: CurriculumSession[] = [
     status: "planned",
   },
   {
-    id: 17,
-    week: 9,
+    id: 15,
+    week: 8,
     title: "Lists",
     goal: "Store many values in one place instead of many variables.",
     newBlocks: [
@@ -442,8 +419,8 @@ export const curriculum: CurriculumSession[] = [
     status: "planned",
   },
   {
-    id: 18,
-    week: 9,
+    id: 16,
+    week: 8,
     title: "My Blocks",
     goal: "Build your own block to avoid repeating code.",
     newBlocks: ["define my block", "my block with inputs"],
@@ -460,8 +437,8 @@ export const curriculum: CurriculumSession[] = [
 
   // ---------- Mastery ----------
   {
-    id: 19,
-    week: 10,
+    id: 17,
+    week: 9,
     title: "Platformer: Gravity & Jumping",
     goal: "Build the hardest common game mechanic — real jumping.",
     newBlocks: ["change y by (velocity)", "set velocity to", "if not touching ground"],
@@ -479,8 +456,8 @@ export const curriculum: CurriculumSession[] = [
     status: "planned",
   },
   {
-    id: 20,
-    week: 10,
+    id: 18,
+    week: 9,
     title: "Capstone & Showcase",
     goal: "Design and build a game of their own, then present it.",
     newBlocks: [],
@@ -501,10 +478,10 @@ export const curriculum: CurriculumSession[] = [
 ];
 
 export const courseStats = {
-  totalSessions: 20,
-  scratchSessions: 16,
+  totalSessions: 18,
+  scratchSessions: 14,
   minutesEach: 90,
   perWeek: 2,
-  weeks: 10,
+  weeks: 9,
   projects: 6,
 };
