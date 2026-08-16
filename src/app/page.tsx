@@ -35,8 +35,8 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8">
           {sessions.map((session) => (
             <Link
-              href={`/session/${session.id}?slide=1`}
-              key={session.id}
+              href={`/session/${session.slug ?? session.id}?slide=1`}
+              key={session.slug ?? session.id}
               className="group block relative rounded-3xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-slate-100"
             >
               <div 
@@ -58,7 +58,7 @@ export default function Home() {
                 
                 <div className="mb-2">
                   <span className="font-outfit font-bold text-sm tracking-widest uppercase" style={{ color: session.color }}>
-                    Session {session.id}
+                    {session.slug ? "Session 8 Practical" : `Session ${session.id}`}
                   </span>
                 </div>
                 

@@ -10,6 +10,29 @@ import { VisualBlocksContainer } from "./VisualBlocks";
 import { FlipCardsContainer } from "./FlipCards";
 import { UiTour } from "./UiTour";
 
+function CodePanel({ lines }: { lines: string[] }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.25, duration: 0.35 }}
+      className="w-full mt-8 rounded-3xl overflow-hidden bg-slate-950 shadow-2xl ring-8 ring-white/80"
+    >
+      <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 bg-slate-900 border-b border-slate-700">
+        <span className="font-outfit font-bold text-lg text-slate-100">Build this script</span>
+        <span className="font-fira text-sm text-amber-300">Scratch blocks · top to bottom</span>
+      </div>
+      <pre className="px-6 py-5 overflow-x-auto text-left font-fira text-lg md:text-xl leading-relaxed text-emerald-300">
+        {lines.map((line, idx) => (
+          <code key={idx} className="block whitespace-pre">
+            {line}
+          </code>
+        ))}
+      </pre>
+    </motion.div>
+  );
+}
+
 export function SlideLayout({ slide }: { slide: SlideData }) {
   // Background variants
   const bgClasses = {
@@ -168,7 +191,19 @@ export function SlideLayout({ slide }: { slide: SlideData }) {
                   <NewWord wordData={slide.newWord} />
                 </div>
               )}
+
+              {/* Keep exact code beside the explanation on build slides */}
+              {slide.codeSnippet && slide.codeSnippet.length > 0 && (
+                <CodePanel lines={slide.codeSnippet} />
+              )}
             </div>
+          </div>
+        )}
+
+        {/* Code for game/review/homework slides that do not use the standard two-column block */}
+        {slide.type !== "content" && slide.type !== "homework" && slide.type !== "activity" && slide.codeSnippet && slide.codeSnippet.length > 0 && (
+          <div className="w-full max-w-4xl">
+            <CodePanel lines={slide.codeSnippet} />
           </div>
         )}
 

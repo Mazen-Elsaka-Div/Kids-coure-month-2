@@ -74,6 +74,7 @@ export interface SlideData {
 
 export interface SessionData {
   id: number;
+  slug?: string;
   title: string;
   subtitle: string;
   emoji: string;
