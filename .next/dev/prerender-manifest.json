@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "a358770f6fc9cac2b5363d9719044ef9",
-    "previewModeSigningKey": "6658d5879d7b201ee4a74b33cbf74a0fb6301a17b56fb93669b0a7f44012cc06",
-    "previewModeEncryptionKey": "36f7fabe72965f46a99c19c10a297e60dc3dbc46dee8ed62d0c80af074e32669"
-  }
-}
+{"version":4,"routes":{"/session/1":{},"/session/2":{},"/session/3":{},"/session/4":{},"/session/5":{},"/session/6":{},"/session/7":{},"/session/8":{},"/session/9":{},"/session/10":{}},"dynamicRoutes":{"/session/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/session/[id]","routeRegex":"^\\/session\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"a358770f6fc9cac2b5363d9719044ef9","previewModeSigningKey":"6658d5879d7b201ee4a74b33cbf74a0fb6301a17b56fb93669b0a7f44012cc06","previewModeEncryptionKey":"36f7fabe72965f46a99c19c10a297e60dc3dbc46dee8ed62d0c80af074e32669"}}

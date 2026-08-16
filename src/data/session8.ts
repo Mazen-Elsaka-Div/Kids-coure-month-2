@@ -684,6 +684,63 @@ export const session8: SessionData = {
     },
     {
       id: 18,
+      title: "Video: The Loops Song",
+      emoji: "🎬",
+      type: "video",
+      content: ["A fun song about loops — see how many loop types you can spot!"],
+      videoUrl: "https://www.youtube.com/embed/oWjiJIoG3nQ",
+      mascotMessage: "Sing along — loops are everywhere! 📺",
+      teacherNotes: {
+        questions: ["Which loops from the song did we learn today?"],
+        expectedAnswers: ["Repeat, forever, and repeat until!"],
+        tips: [
+          "This is a light brain-break after a heavy session — let them enjoy it.",
+          "Challenge: raise a hand every time the video shows something repeating.",
+        ],
+        transition: "Rested? Good. One sneaky bug is waiting for you.",
+      },
+      bgVariant: "purple",
+    },
+    {
+      id: 19,
+      title: "Bug Hunt: The Silent Script!",
+      emoji: "🔍",
+      type: "debug",
+      content: [],
+      debug: {
+        scenario:
+          "A student wrote a script to make the cat spin when the flag is clicked. They press the flag... and NOTHING happens. The blocks are all correct!",
+        steps: [
+          "(no hat block on top!) ⬅️",
+          "repeat 10 🔁",
+          "turn 36 degrees ↻",
+          "wait 0.1 seconds ⏱️",
+        ],
+        buggyIndex: 0,
+        whyItsWrong:
+          "There's no EVENT hat block! Without 'when green flag clicked' on top, the script never knows when to start. Every script needs a hat!",
+        fixHint: "Look at the TOP of the script. What kind of block must every script start with?",
+      },
+      mascotMessage: "I pressed the flag a hundred times and nothing happened! What's missing? 🐰",
+      teacherNotes: {
+        questions: [
+          "Why doesn't the script run when the flag is clicked?",
+          "What block family do hat blocks come from?",
+        ],
+        expectedAnswers: [
+          "It has no hat block — nothing tells it to start!",
+          "Events — the yellow blocks!",
+        ],
+        tips: [
+          "This mirrors the 'My code does nothing' flip card — the number one real-world beginner bug.",
+          "Show a hatless script in Scratch live: clicking the flag truly does nothing.",
+        ],
+        transition: "Bug found! Now let's lock in today's words.",
+      },
+      bgVariant: "orange",
+    },
+    {
+      id: 20,
       title: "Today's Words",
       emoji: "📚",
       type: "review",
@@ -745,7 +802,7 @@ export const session8: SessionData = {
       bgVariant: "purple",
     },
     {
-      id: 19,
+      id: 21,
       title: "Homework Mission",
       emoji: "🏠",
       type: "homework",
