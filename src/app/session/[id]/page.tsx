@@ -6,13 +6,14 @@ import { session4 } from "@/data/session4";
 import { session5 } from "@/data/session5";
 import { session6 } from "@/data/session6";
 import { session7 } from "@/data/session7";
+import { session8Practical } from "@/data/session8-practical";
 import { Navigation } from "@/components/Navigation";
 import { SlideLayout } from "@/components/SlideLayout";
 import { TeacherNotes } from "@/components/TeacherNotes";
 import { Mascot } from "@/components/Mascot";
 
 export function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }];
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }, { id: "6" }, { id: "7" }, { id: "8-practical" }];
 }
 
 export default async function SessionPage(props: {
@@ -23,7 +24,7 @@ export default async function SessionPage(props: {
   const params = await props.params;
 
   const sessionId = params.id;
-  const session = sessionId === "1" ? session1 : sessionId === "2" ? session2 : sessionId === "3" ? session3 : sessionId === "4" ? session4 : sessionId === "5" ? session5 : sessionId === "6" ? session6 : sessionId === "7" ? session7 : null;
+  const session = sessionId === "1" ? session1 : sessionId === "2" ? session2 : sessionId === "3" ? session3 : sessionId === "4" ? session4 : sessionId === "5" ? session5 : sessionId === "6" ? session6 : sessionId === "7" ? session7 : sessionId === "8-practical" ? session8Practical : null;
 
   if (!session) {
     notFound();
